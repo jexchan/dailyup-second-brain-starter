@@ -1,0 +1,53 @@
+# ---- System ----
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ---- Obsidian ----
+# Personal workspace state (leaks recently opened files)
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/plugins/**/data.json
+
+# ---- Backups & temp ----
+*.backup
+*.bak
+*.tmp
+*.temp
+
+# ---- Attachments ----
+# Uncomment to avoid committing all attachments (recommended for big vaults)
+# Attachments/*
+# !Attachments/.gitkeep
+
+# ---- Personal content (users of this template may want to keep private) ----
+# Uncomment any of these to keep local-only:
+# 02_Daily/20*.md
+# 02_Daily/19*.md
+# 06_Tasks/This_Week.md
+# 08_Life/
+# 20_Archive/
+
+# ---- Secrets ----
+.env
+.env.*
+!.env.example
+secrets.json
+credentials.json
+*.pem
+*.key
+
+# ---- Editor / IDE ----
+.vscode/
+.idea/
+
+# ---- Node / tooling (if you add scripts later) ----
+node_modules/
+.npm/
+.yarn/
+dist/
+build/

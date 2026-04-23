@@ -1,0 +1,18 @@
+filters:
+  and:
+    - file.name.startsWith("subscription_")
+    - file.ext == "md"
+views:
+  - type: table
+    name: 订阅列表
+    columns:
+      - key: title
+        title: 服务
+      - key: subscribed
+        title: 订阅日期
+      - key: renewal
+        title: 续费日期
+      - key: type
+        title: 类型
+      - key: price
+        title: 价格

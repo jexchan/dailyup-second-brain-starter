@@ -1,0 +1,25 @@
+filters:
+  and:
+    - file.name.startsWith("opensource_")
+    - file.ext == "md"
+views:
+  - type: table
+    name: 开源项目列表
+    order:
+      - title
+      - url
+      - tags
+    columns:
+      - key: title
+        title: 项目
+      - key: author
+        title: 作者/组织
+      - key: stars
+        title: Stars
+      - key: language
+        title: 语言
+      - key: url
+        title: 链接
+    columnSize:
+      note.title: 296
+      note.url: 429

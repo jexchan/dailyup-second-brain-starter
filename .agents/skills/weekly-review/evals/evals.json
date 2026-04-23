@@ -1,0 +1,26 @@
+{
+  "skill_name": "weekly-review",
+  "evals": [
+    {
+      "id": 1,
+      "name": "basic-weekly-review",
+      "prompt": "做一下周回顾，看看这周项目进展怎么样",
+      "expected_output": "应该读取本周的 Daily Notes 和项目 Next_Actions，生成结构化的周回顾报告，包含完成事项、推进中的工作、遇到的问题和下周建议",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "weekly-review-casual",
+      "prompt": "这周都干了啥，给我总结一下",
+      "expected_output": "应该以更口语化的方式总结本周完成的工作和项目进展，但仍然保持结构化",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "weekly-recap",
+      "prompt": "weekly recap",
+      "expected_output": "应该生成英文或中文的周回顾，包含本周关键进展和下周计划",
+      "files": []
+    }
+  ]
+}

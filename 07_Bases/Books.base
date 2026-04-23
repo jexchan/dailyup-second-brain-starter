@@ -1,0 +1,32 @@
+filters:
+  and:
+    - file.name.startsWith("book_")
+    - file.ext == "md"
+views:
+  - type: cards
+    name: 封面墙
+    sort:
+      - property: created
+        direction: DESC
+    image: note.cover
+    title: |
+      {{note.book}}
+    body:
+      - value: note.author
+      - value: note.created
+      - value: |
+          {{#if note.douban_url}}
+          [豆瓣]({{note.douban_url}})
+          {{/if}}
+    imageFit: contain
+  - type: table
+    name: 书单
+    columns:
+      - key: title
+        title: 书名
+      - key: book
+        title: 书名
+      - key: author
+        title: 作者
+      - key: created
+        title: 创建日期

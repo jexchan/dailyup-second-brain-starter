@@ -1,0 +1,20 @@
+filters:
+  and:
+    - file.name.startsWith("person_")
+    - file.ext == "md"
+views:
+  - type: cards
+    name: 人物卡片
+    sort:
+      - property: created
+        direction: DESC
+    image: note.cover
+    title: |
+      {{file.name.replace("person_", "").replace(/_/g, " ")}}
+    body:
+      - value: |
+          {{#each file.frontmatter.tags}}
+          {{this}}
+          {{/each}}
+      - value: note.领域
+      - value: note.source

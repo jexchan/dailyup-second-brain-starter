@@ -1,0 +1,23 @@
+filters:
+  and:
+    - file.name.startsWith("resource_")
+    - file.ext == "md"
+views:
+  - type: table
+    name: 资源列表
+    order:
+      - file.name
+      - source
+      - tags
+    sort:
+      - property: created
+        direction: DESC
+    columns:
+      - key: title
+        title: 名称
+      - key: tags
+        title: 标签
+      - key: created
+        title: 创建日期
+      - key: source
+        title: 来源
