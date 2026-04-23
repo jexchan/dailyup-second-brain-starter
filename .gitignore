@@ -45,6 +45,11 @@ credentials.json
 .vscode/
 .idea/
 
+# ---- Local drafts (not intended for publishing) ----
+LAUNCH_ARTICLE_DRAFT.md
+*.draft.md
+drafts/
+
 # ---- Node / tooling (if you add scripts later) ----
 node_modules/
 .npm/

@@ -113,23 +113,34 @@ AI 会基于你填好的 `Current_Priorities.md` + `06_Tasks/Inbox.md` + `03_Pro
 
 ## 第 6 步：删除示例内容
 
-确认你理解结构后，可以安全删除：
+最简单的方式——跑内置的初始化脚本：
 
 ```bash
-# 示例 Daily
+bash scripts/init.sh
+```
+
+它会交互式地：
+- 逐个确认是否删除 `_EXAMPLE_*` 示例文件
+- 删除 `_Example_Project/`
+- 为今天创建第一篇 Daily Note
+- 提醒你去填写 `01_Context/` 五件套
+
+如果你想跳过所有确认一键清理：
+
+```bash
+bash scripts/init.sh --yes
+```
+
+或者手动删除：
+
+```bash
 rm 02_Daily/_EXAMPLE_*.md
-
-# 示例项目
 rm -rf 03_Projects/_Example_Project
-
-# 示例卡片（6 张）
 rm 04_Knowledge/00_Cards/_EXAMPLE_*.md
-
-# 示例剪藏
 rm 05_References/01_Inbox/_EXAMPLE_*.md
 ```
 
-或者把它们留着作为参考，不影响使用。
+也可以把示例留着作为参考，不影响使用。
 
 ---
 
