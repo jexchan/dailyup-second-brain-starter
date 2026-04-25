@@ -1,7 +1,6 @@
 ---
 name: session-brief
 description: Generate a concise working-session brief from this Obsidian vault by reading AGENTS.md, stable context, recent daily notes, current tasks, and active project next actions. Use this skill when starting a new session, resuming work after a break, or needing a quick refresher on current priorities and what to focus on next.
-disable-model-invocation: true
 ---
 
 # Session Brief
