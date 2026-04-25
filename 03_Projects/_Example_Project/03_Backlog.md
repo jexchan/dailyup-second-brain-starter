@@ -1,3 +1,10 @@
+---
+type: project_file
+project: Example Project
+section: backlog
+status: active
+updated: 2026-04-25
+---
 # Backlog
 
 > 待办事项池：已分解但尚未排期的任务

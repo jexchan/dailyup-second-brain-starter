@@ -2,7 +2,7 @@
 title: Example Project
 description: A sample project illustrating the 03_Projects/ structure
 created: 2025-01-01
-modified: 2025-01-01
+modified: 2026-04-25
 tags: [example, learning]
 status: active
 ---

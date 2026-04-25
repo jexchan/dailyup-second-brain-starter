@@ -1,3 +1,10 @@
+---
+type: project_file
+project: {{项目名称}}
+section: planning
+status: active
+updated: 2026-04-25
+---
 # Planning
 
 ## 项目里程碑

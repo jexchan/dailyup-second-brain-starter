@@ -1,3 +1,10 @@
+---
+type: project_file
+project: {{项目名称}}
+section: goals
+status: active
+updated: 2026-04-25
+---
 # Goals
 
 ## 短期目标（{{1-2周|1个月}}）

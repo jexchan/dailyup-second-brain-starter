@@ -1,3 +1,10 @@
+---
+type: project_file
+project: {{项目名称}}
+section: next
+status: active
+updated: 2026-04-25
+---
 # Next
 
 > 下一步要做的任务：已排期，即将开始
