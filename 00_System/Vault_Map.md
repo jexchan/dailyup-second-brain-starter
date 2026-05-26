@@ -56,8 +56,14 @@ tags: [system, map, overview]
 - `00_Cards/` — 原子化知识卡片
   - `.templates/` — 卡片模板（22 种类型）
     - `insight`, `counterintuitive`, `paradox`, `question`, `story`, `quote`, `term`, `mentalmodel`, `book`, `book-note`, `person`, `resource`, `tool`, `opensource`, `course`, `subscription`, `prompt`, `checklist`, `tip`, `moc`, `techstack`, `atomic-habit`
-- `01_Topics/` — 主题学习笔记
-- `Frameworks/` — 常用框架和方法论（示例）
+- `01_Topics/` — 某个领域的系统学习过程
+  - 示例：`_EXAMPLE_Learning_Science/`
+  - 单个概念、观点、模型进入 `00_Cards/`
+  - 可重复调用的方法论手册进入 `Frameworks/`
+- `Frameworks/` — 可重复调用、需要整体阅读、能指导行动的方法论手册
+  - 示例：`_EXAMPLE_问题-框架-落地.md`
+  - 单个概念、观点、模型进入 `00_Cards/`
+  - 某个领域的系统学习过程进入 `01_Topics/`
 
 ## 05_References
 网上剪藏文章的收集与消化

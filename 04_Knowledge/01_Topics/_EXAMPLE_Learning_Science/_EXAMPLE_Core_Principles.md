@@ -3,9 +3,11 @@ title: Learning Science
 description: Science of how we learn
 created: 2026-03-29
 tags: [knowledge, learning, science]
-status: evergreen
+status: example
 ---
-# Core Principles
+# 示例：Learning Science Core Principles
+
+> 这是 `01_Topics/` 的示例主题笔记，用于展示“某个领域的系统学习过程”可以如何沉淀。正式使用时，可删除 `_EXAMPLE_` 示例目录后创建自己的主题。
 
 ## 为什么重要
 学习科学为 Learning OS 提供理论基础，帮助区分“感觉学到了”和“真的学会了”。

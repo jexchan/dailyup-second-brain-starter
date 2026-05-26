@@ -12,7 +12,7 @@
 
 - **7 个主目录的信息架构** — 系统规则 / 上下文 / 日记 / 项目 / 知识 / 参考 / 任务
 - **22 种原子化卡片模板** — insight / book / mentalmodel / person / tool / quote …
-- **10 个开箱即用的 AI 技能（Skills）** — `/today`、`/weekly-review`、`/closeday`、`/card-creator` 等
+- **12 个开箱即用的 AI 技能（Skills）** — `/today`、`/weekly-review`、`/closeday`、`/card-creator` 等
 - **完整的 AI 协作规则** — CLAUDE.md + AGENTS.md 让 Claude Code / Codex / Cursor 立刻理解你的知识库
 - **Obsidian Bases 数据库视图** — Books、Persons、Resources、Opensource、Subscriptions
 - **清晰的写作规范、命名规范和任务管理规则**
@@ -78,15 +78,14 @@ cd my-brain
 ├── 03_Projects/       # 项目管理（含 8 件套模板 + 示例项目）
 ├── 04_Knowledge/      # 长期知识沉淀
 │   ├── 00_Cards/      # 22 种原子化卡片 + 6 张示例
-│   ├── 01_Topics/     # 主题学习笔记
-│   └── Frameworks/    # 方法论手册
+│   ├── 01_Topics/     # 主题学习笔记（含 1 个示例主题）
+│   └── Frameworks/    # 可重复调用的方法论手册
 ├── 05_References/     # 剪藏文章（Inbox → 分类 → 提炼 → 归档）
 ├── 06_Tasks/          # 任务收集（Inbox / This_Week / Waiting）
 ├── 07_Bases/          # Obsidian 数据库视图
 ├── Attachments/       # 附件统一存放
 ├── .obsidian/         # Obsidian 配置（已精简）
-├── .claude/skills/    # Claude Code 技能
-├── .agents/skills/    # 通用 Agent 技能（与 .claude 同步）
+├── .agents/skills/    # 通用 Agent 技能
 ├── CLAUDE.md          # AI 协作总导航（Claude 专用）
 └── AGENTS.md          # AI 协作总导航（通用，软链到 CLAUDE.md）
 ```
@@ -95,7 +94,7 @@ cd my-brain
 
 ## 内置 AI 技能
 
-> 所有技能都在 `.claude/skills/` 和 `.agents/skills/` 下。
+> 技能说明见 [`Skills_Manual.md`](./Skills_Manual.md)。当前通用 Agent 技能位于 `.agents/skills/` 下。
 
 | 技能 | 用途 | 触发方式 |
 |---|---|---|
@@ -109,6 +108,32 @@ cd my-brain
 | `connect` | 连接两个主题，找出桥梁概念 | "连接 X 和 Y" |
 | `trace` | 追踪一个主题在 Vault 中的演化 | "追踪 X 的演化" |
 | `check-health` | 检查孤立卡片、失效链接、矛盾观点 | "检查知识库健康" |
+| `spaced-review` | 管理知识卡片间隔复习 | "今天该复习什么" |
+| `system-sync` | 同步系统说明、README、统计和技能手册 | "同步系统信息" |
+
+---
+
+## Frameworks 方法论手册
+
+`04_Knowledge/Frameworks/` 只存放**可重复调用、需要整体阅读、能指导行动的方法论手册**。
+
+- 单个概念、观点、模型 → 放入 `04_Knowledge/00_Cards/`
+- 某个领域的系统学习过程 → 放入 `04_Knowledge/01_Topics/`
+- 可作为完整流程反复调用的方法论手册 → 放入 `04_Knowledge/Frameworks/`
+
+模板中仅保留 `_EXAMPLE_问题-框架-落地.md` 作为示例方法论手册；初始化个人 Vault 时可由 `scripts/init.sh` 清理。
+
+---
+
+## Topics 主题学习笔记
+
+`04_Knowledge/01_Topics/` 用于存放**某个领域的系统学习过程**。
+
+- 单个概念、观点、模型 → 放入 `04_Knowledge/00_Cards/`
+- 可重复调用、需要整体阅读、能指导行动的方法论手册 → 放入 `04_Knowledge/Frameworks/`
+- 围绕某个领域持续积累目标、笔记、练习和资源 → 放入 `04_Knowledge/01_Topics/`
+
+模板中保留 `_EXAMPLE_Learning_Science/` 作为示例主题目录；初始化个人 Vault 时可由 `scripts/init.sh` 清理。
 
 ---
 
@@ -148,7 +173,7 @@ cd my-brain
 
 - **结构**：可以改目录名和编号，但请同步更新 `00_System/Vault_Map.md` 和 `CLAUDE.md`
 - **卡片类型**：直接在 `04_Knowledge/00_Cards/.templates/` 添加新类型
-- **AI 技能**：在 `.claude/skills/` 下新建目录，写一个 `SKILL.md` 即可
+- **AI 技能**：在 `.agents/skills/` 下新建目录，写一个 `SKILL.md` 即可
 - **规则**：`00_System/` 下的规则都是你的，改即可。改完告诉 AI"请读一下新规则"
 
 ---

@@ -3,7 +3,7 @@
 # init.sh — Initialize a fresh Vault from this starter template
 #
 # What it does:
-#   1. Removes all _EXAMPLE_* files (example daily notes, cards, clippings)
+#   1. Removes all _EXAMPLE_* files and directories (example daily notes, cards, topics, frameworks, clippings)
 #   2. Removes the _Example_Project/ directory
 #   3. Optionally rewrites CLAUDE.md / AGENTS.md placeholders with your name
 #   4. Creates the first Daily Note for today
@@ -61,6 +61,7 @@ removed=0
 for pat in \
   "02_Daily/_EXAMPLE_*.md" \
   "04_Knowledge/00_Cards/_EXAMPLE_*.md" \
+  "04_Knowledge/Frameworks/_EXAMPLE_*.md" \
   "05_References/01_Inbox/_EXAMPLE_*.md"
 do
   for f in $pat; do
@@ -71,6 +72,15 @@ do
       echo "  $(green '✓') removed $f"
     fi
   done
+done
+
+for dir in 04_Knowledge/01_Topics/_EXAMPLE_*; do
+  [[ -d "$dir" ]] || continue
+  if confirm "  delete $dir/ ?"; then
+    rm -rf "$dir"
+    removed=$((removed + 1))
+    echo "  $(green '✓') removed $dir/"
+  fi
 done
 
 if [[ -d "03_Projects/_Example_Project" ]]; then

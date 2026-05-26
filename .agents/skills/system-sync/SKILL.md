@@ -44,6 +44,7 @@ description: 将当前 Obsidian Vault 中新增、删除、迁移、重命名或
 - `03_Projects/README.md`
 - `04_Knowledge/README.md`
 - `04_Knowledge/00_Cards/README.md`
+- `04_Knowledge/01_Topics/README.md`
 - `04_Knowledge/Frameworks/README.md`
 - `05_References/README.md`
 
@@ -297,6 +298,7 @@ find . -path './.git' -prune -o -path './.obsidian' -prune -o -type f \( -path '
 - `03_Projects/README.md`
 - `04_Knowledge/README.md`
 - `04_Knowledge/00_Cards/README.md`
+- `04_Knowledge/01_Topics/README.md`
 - `04_Knowledge/Frameworks/README.md`
 - `05_References/README.md`
 
