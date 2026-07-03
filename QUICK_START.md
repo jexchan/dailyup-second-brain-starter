@@ -10,7 +10,7 @@
 
 1. **[Obsidian](https://obsidian.md)** — 免费下载
 2. **Git** — `xcode-select --install`（macOS）或从 [git-scm.com](https://git-scm.com/) 下载
-3. **（推荐）Claude Code / Codex CLI / Cursor** — 用来跑 AI Skills
+3. **（推荐）AI 编码工具** — 跑 Skills 用；作者常用组合：🌍 [Codex](https://developers.openai.com/codex/cli/) + GPT-5.5 / 🇨🇳 [ZCode](https://zcode.z.ai) + [GLM-5.2](https://z.ai/blog/glm-5.2)
 
 ---
 
@@ -72,7 +72,7 @@ git commit -m "initial commit from starter"
 
 ## 第 4 步：试跑第一个 AI 技能
 
-打开 Claude Code / Codex / Cursor，在 `my-brain/` 目录下运行：
+打开你的 AI 编码工具（如 Codex / ZCode），在 `my-brain/` 目录下运行：
 
 ### 试试 `/session-brief`
 
@@ -168,7 +168,7 @@ rm 05_References/01_Inbox/_EXAMPLE_*.md
 ### Skill 不生效？
 
 - 确保 `.claude/skills/` 和 `.agents/skills/` 在 Vault 根目录
-- 确保你的 Claude Code / Codex 版本支持 Skills
+- 确保你的 AI 编码工具（Codex / ZCode 等）版本支持 Skills
 - 查看具体 Skill 的 `SKILL.md` 了解调用约定
 
 ### 如何让 Vault 多端同步？

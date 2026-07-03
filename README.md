@@ -13,7 +13,7 @@
 - **7 个主目录的信息架构** — 系统规则 / 上下文 / 日记 / 项目 / 知识 / 参考 / 任务
 - **22 种原子化卡片模板** — insight / book / mentalmodel / person / tool / quote …
 - **13 个开箱即用的 AI 技能（Skills）** — `/today`、`/weekly-review`、`/closeday`、`/card-creator`、`/critical-check` 等
-- **完整的 AI 协作规则** — CLAUDE.md + AGENTS.md 让 Claude Code / Codex / Cursor 立刻理解你的知识库
+- **完整的 AI 协作规则** — CLAUDE.md + AGENTS.md 让任意支持该协议的 AI 编码工具立刻理解你的知识库
 - **Obsidian Bases 数据库视图** — Books、Persons、Resources、Opensource、Subscriptions
 - **清晰的写作规范、命名规范和任务管理规则**
 
@@ -60,7 +60,7 @@ cd my-brain
 #    编辑 01_Context/ 下的 About_Me / Mission_and_Vision /
 #    Brand_Voice / Audience_Profiles / Current_Priorities
 
-# 5. 安装 Claude Code / Codex / Cursor，跑第一个 Skill
+# 5. 安装 AI 编码工具（推荐 Codex / ZCode），跑第一个 Skill
 #    /session-brief   → 让 AI 读懂你的 Vault
 #    /today           → 生成今日计划
 #    /card-creator    → 创建你的第一张知识卡片
@@ -144,9 +144,14 @@ cd my-brain
 - [Obsidian](https://obsidian.md)（免费）
 - Git（用于版本控制和同步）
 
-**强烈推荐**：
-- [Claude Code](https://claude.com/claude-code) / [Codex CLI](https://developers.openai.com/codex/cli/) / [Cursor](https://cursor.com/)
-  — 才能发挥 Skills 的价值
+**强烈推荐** — 才能发挥 Skills 的价值（作者常用的组合）：
+
+| 地区 | 编码工具 | 驱动模型 |
+|---|---|---|
+| 🌍 国外 | [Codex](https://developers.openai.com/codex/cli/) | GPT-5.5 |
+| 🇨🇳 国内 | [ZCode](https://zcode.z.ai) | [GLM-5.2](https://z.ai/blog/glm-5.2) |
+
+> 本模板基于 `AGENTS.md` / `CLAUDE.md` 通用协议，理论上任何支持该协议的 AI 编码工具（Claude Code、Cursor 等）都能接入；以上只是作者实测顺手的推荐。
 
 **Obsidian 插件**（Core 插件够用，可选增强）：
 - Templater — 动态模板变量
@@ -158,7 +163,7 @@ cd my-brain
 ## 它适合谁
 
 - ✅ 想认真搭建**长期使用**的第二大脑，而不是玩票
-- ✅ 已经在用 / 准备用 **AI 协作工具**（Claude Code / Cursor / Codex）
+- ✅ 已经在用 / 准备用 **AI 编码工具**（Codex / ZCode 等）
 - ✅ 愿意花 30 分钟把 5 个 Context 文件填好，换来 AI 长期精准协作
 - ✅ 喜欢**文件优先、本地可控**的知识管理方式
 
