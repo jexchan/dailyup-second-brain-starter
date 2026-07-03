@@ -1,14 +1,14 @@
 ---
 description: 本地 AI 技能说明手册
 tags: [system, skills, manual]
-updated: 2026-05-26
+updated: 2026-07-03
 ---
 # Skills Manual
 
 这份手册说明当前 Vault 自带的本地技能，帮助你知道在什么场景下可以直接对 AI 说什么，以及每个技能会读取哪些内容、产生什么结果、是否会写回知识库。
 
 当前统计口径：按 `.agents/skills/*/SKILL.md` 统计。  
-当前本地技能数量：12 个。
+当前本地技能数量：13 个。
 
 ---
 
@@ -52,6 +52,7 @@ updated: 2026-05-26
 | `random-thinking` | 随机抽取知识内容，获得灵感 | 只读 | `04_Knowledge/00_Cards/`, `04_Knowledge/01_Topics/`, `04_Knowledge/Frameworks/` | 不写入 |
 | `connect` | 寻找两个主题之间的连接 | 只读 | `04_Knowledge/`, `03_Projects/`, `02_Daily/` | 不写入 |
 | `trace` | 追踪一个主题在 Vault 中的演变 | 只读 | `02_Daily/`, `03_Projects/`, `04_Knowledge/`, `01_Context/` | 不写入 |
+| `critical-check` | 对观点、证据、推理做建设性质疑与校验 | 默认只读，确认后写入 | `04_Knowledge/`, `03_Projects/`, `05_References/`, `02_Daily/` | 卡片反思区 / 项目文件 |
 | `check-health` | 检查知识库健康状态 | 只读报告 | Markdown 文件、知识卡片、wikilink | 不写入 |
 | `system-sync` | 更新系统地图、README、技能手册等 | 写入系统说明 | 系统文件、README、技能、统计数据 | `00_System/`, `README.md`, `Skills_Manual.md` 等 |
 
@@ -120,6 +121,10 @@ updated: 2026-05-26
 - 用 `connect` 寻找两个主题之间的连接。
 - 用 `trace` 追踪一个主题的发展脉络。
 
+如果你想对已有观点、草稿或判断做建设性质疑：
+
+- 用 `critical-check` 拆出主张，检查证据与推理，暴露隐含假设，给出迭代方向。
+
 示例：
 
 ```text
@@ -132,6 +137,10 @@ updated: 2026-05-26
 
 ```text
 追踪一下“第二大脑”这个主题在我的 Vault 里是怎么演变的。
+```
+
+```text
+质疑一下这张卡片：[[insight_学习不是输入而是重组]]
 ```
 
 ### 5. 系统维护
@@ -485,6 +494,49 @@ updated: 2026-05-26
 
 ---
 
+### `critical-check`
+
+用途：对指定内容做“建设性怀疑”——拆出主张、检查证据、寻找反例、暴露隐含假设，并给出迭代方向。目标不是把内容打倒，而是帮你把一个观点理解得更深、更稳、更可迭代。
+
+适合在这些时候使用：
+
+- 想知道某个观点、卡片或草稿是否站得住。
+- 写完文章或课程设计后，想做一轮 red team。
+- 怀疑某个项目判断被单一经验过度外推。
+- 想让价值判断、方法论主张、个人经验总结暴露适用边界。
+
+常见触发词：
+
+- “质疑一下”
+- “帮我校验”
+- “挑战这个观点”
+- “找漏洞”
+- “这个观点站得住吗”
+- “帮我反驳自己”
+- “red team” / “critical review” / “evidence check”
+
+主要读取：
+
+- `AGENTS.md`
+- 用户直接贴出的内容，或 `04_Knowledge/00_Cards/`、`03_Projects/`、`05_References/`、`02_Daily/` 中的指定文件
+- 需要事实核查或外部证据时联网检索，并标注来源
+
+输出包括：
+
+- 我对原观点的理解（先复述，避免误读）
+- 主张地图（中心主张、子主张、证据、隐含假设、目标对象）
+- 最值得追问的地方（附“为什么重要”和“如何改进”）
+- 证据与推理校验表
+- 可能的反例或边界
+- 更稳妥的改写
+- 下一步迭代建议
+
+每个重要质疑会标注确信度：比较可靠 / 需要澄清 / 风险较高。
+
+写回规则：默认只读。用户确认后，可追加到原卡片的反思区，或新建 `question` / `insight` 卡片，或写入对应项目的 `01_Planning.md` / `04_Next.md`。
+
+---
+
 ### `check-health`
 
 用途：审查知识库健康状况，发现潜在问题。
@@ -603,4 +655,3 @@ updated: 2026-05-26
 find .agents/skills -maxdepth 2 -name SKILL.md -print | sort
 find .agents/skills -maxdepth 2 -name SKILL.md | wc -l
 ```
-

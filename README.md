@@ -12,7 +12,7 @@
 
 - **7 个主目录的信息架构** — 系统规则 / 上下文 / 日记 / 项目 / 知识 / 参考 / 任务
 - **22 种原子化卡片模板** — insight / book / mentalmodel / person / tool / quote …
-- **12 个开箱即用的 AI 技能（Skills）** — `/today`、`/weekly-review`、`/closeday`、`/card-creator` 等
+- **13 个开箱即用的 AI 技能（Skills）** — `/today`、`/weekly-review`、`/closeday`、`/card-creator`、`/critical-check` 等
 - **完整的 AI 协作规则** — CLAUDE.md + AGENTS.md 让 Claude Code / Codex / Cursor 立刻理解你的知识库
 - **Obsidian Bases 数据库视图** — Books、Persons、Resources、Opensource、Subscriptions
 - **清晰的写作规范、命名规范和任务管理规则**
@@ -107,6 +107,7 @@ cd my-brain
 | `random-thinking` | 跨主题随机抽卡做关联思考 | "给点灵感" |
 | `connect` | 连接两个主题，找出桥梁概念 | "连接 X 和 Y" |
 | `trace` | 追踪一个主题在 Vault 中的演化 | "追踪 X 的演化" |
+| `critical-check` | 对观点/证据/推理做建设性质疑与校验 | "质疑一下这个观点" |
 | `check-health` | 检查孤立卡片、失效链接、矛盾观点 | "检查知识库健康" |
 | `spaced-review` | 管理知识卡片间隔复习 | "今天该复习什么" |
 | `system-sync` | 同步系统说明、README、统计和技能手册 | "同步系统信息" |
