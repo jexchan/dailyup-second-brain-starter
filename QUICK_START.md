@@ -10,7 +10,7 @@
 
 1. **[Obsidian](https://obsidian.md)** — 免费下载
 2. **Git** — `xcode-select --install`（macOS）或从 [git-scm.com](https://git-scm.com/) 下载
-3. **（推荐）AI 编码工具** — 跑 Skills 用；作者常用组合：🌍 [Codex](https://developers.openai.com/codex/cli/) + GPT-5.5 / 🇨🇳 [ZCode](https://zcode.z.ai) + [GLM-5.2](https://z.ai/blog/glm-5.2)
+3. **（推荐）AI 编码工具** — 跑 Skills 用；作者常用组合：[Codex](https://developers.openai.com/codex/cli/) + GPT-5.5 / [ZCode](https://zcode.z.ai) + [GLM-5.2](https://z.ai/blog/glm-5.2)
 
 ---
 
@@ -66,7 +66,7 @@ git commit -m "initial commit from starter"
 | `Audience_Profiles.md` | 你的内容写给谁看（如果不输出内容可以简写） |
 | `Current_Priorities.md` | 你最近 3 个月最重要的事 |
 
-> 💡 **小技巧**：如果一时写不全，先写粗糙版本。这是活文件，以后可以随时更新。
+> **小技巧**：如果一时写不全，先写粗糙版本。这是活文件，以后可以随时更新。
 
 ---
 

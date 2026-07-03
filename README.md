@@ -21,13 +21,11 @@
 
 ---
 
-## 📺 配套视频课程（付费）
+## 配套视频课程
 
 如果你希望跟着作者**系统化地、从零搭建**这套 AI × Obsidian 第二大脑，作者推出了一份完全基于本开源模板构建的视频课程：
 
-> **《从零构建 AI × Obsidian 第二大脑》**（付费课程）
->
-> 🔗 https://dailyup.xyz/courses/cmqhhefjl0000ps1ynw5gxpto
+[**《从零构建 AI × Obsidian 第二大脑》**（付费课程）](https://dailyup.xyz/courses/cmqhhefjl0000ps1ynw5gxpto)
 
 模板本身**永远开源免费**，本文档就是你的上手指南（见下方「5 分钟快速上手」）。课程面向想深入理解设计思路、完整工作流与 AI 协作实战的读者，按需选择即可。
 
@@ -160,8 +158,8 @@ cd my-brain
 
 | 地区 | 编码工具 | 驱动模型 |
 |---|---|---|
-| 🌍 国外 | [Codex](https://developers.openai.com/codex/cli/) | GPT-5.5 |
-| 🇨🇳 国内 | [ZCode](https://zcode.z.ai) | [GLM-5.2](https://z.ai/blog/glm-5.2) |
+| 国外 | [Codex](https://developers.openai.com/codex/cli/) | GPT-5.5 |
+| 国内 | [ZCode](https://zcode.z.ai) | [GLM-5.2](https://z.ai/blog/glm-5.2) |
 
 > 本模板基于 `AGENTS.md` / `CLAUDE.md` 通用协议，理论上任何支持该协议的 AI 编码工具（Claude Code、Cursor 等）都能接入；以上只是作者实测顺手的推荐。
 
@@ -174,16 +172,16 @@ cd my-brain
 
 ## 它适合谁
 
-- ✅ 想认真搭建**长期使用**的第二大脑，而不是玩票
-- ✅ 已经在用 / 准备用 **AI 编码工具**（Codex / ZCode 等）
-- ✅ 愿意花 30 分钟把 5 个 Context 文件填好，换来 AI 长期精准协作
-- ✅ 喜欢**文件优先、本地可控**的知识管理方式
+- 想认真搭建**长期使用**的第二大脑，而不是玩票
+- 已经在用 / 准备用 **AI 编码工具**（Codex / ZCode 等）
+- 愿意花 30 分钟把 5 个 Context 文件填好，换来 AI 长期精准协作
+- 喜欢**文件优先、本地可控**的知识管理方式
 
 它**不**适合谁：
 
-- ❌ 只想要一个能用一周的"漂亮模板"
-- ❌ 完全不打算用 AI 协作（那本模板的一半价值都用不上）
-- ❌ 只用手机做笔记 —— Obsidian 桌面端体验更好
+- 只想要一个能用一周的"漂亮模板"
+- 完全不打算用 AI 协作（那本模板的一半价值都用不上）
+- 只用手机做笔记 —— Obsidian 桌面端体验更好
 
 ---
 
@@ -228,4 +226,4 @@ cd my-brain
 
 ---
 
-_Built with ❤️ for people who take knowledge seriously._
+_Built for people who take knowledge seriously._
