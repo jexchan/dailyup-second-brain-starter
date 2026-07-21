@@ -1,38 +1,33 @@
 ---
-title: How to Take Smart Notes (Example clipping)
-description: Example of a web clipping saved to the Inbox
-tags: [reference, example, inbox]
-source_url: https://example.com/how-to-take-smart-notes
+title: "How to Take Smart Notes（示例剪藏）"
+author: "Example Author"
+source_url: "https://example.com/how-to-take-smart-notes"
+published_at:
 clipped_at: 2025-01-01
-status: unread
+tags:
+  - reference
+  - example
 ---
 
 # How to Take Smart Notes（示例剪藏）
 
-> 这是一篇**示例**剪藏，展示 `05_References/01_Inbox/` 下的文章长啥样。
-> 实际使用时，你可以用 Obsidian 的 Web Clipper / Readwise / 其他工具把文章抓到这里。
+> 这是一篇 Inbox 示例。实际使用时，可以通过 Obsidian Web Clipper、Readwise 或其他工具保存文章。
 
----
+## 为什么保存
 
-## 来源
-https://example.com/how-to-take-smart-notes
+- 想判断卡片笔记和普通摘抄的根本差异。
 
-## 剪藏内容
-（这里是文章的全文或主要内容）
+## 原文
 
 Smart notes are different from ordinary notes in three ways...
 
-## 我的处理状态
+## 消化结果
 
-- [ ] 已读完
-- [ ] 提炼关键点到卡片
-- [ ] 归档到 `07_Archive/` 或删除
-
-## 提炼的卡片
-> 阅读后把有价值的点提炼成卡片，在这里列出链接
-
--
+- **核心价值**：
+- **我的判断**：
+- **产生的行动**：
+- **相关卡片/项目**：
 
 ---
 
-> **消化流程**：`01_Inbox/` → 阅读分类 → 提炼为 `04_Knowledge/00_Cards/` 卡片 → 移动到 `07_Archive/` 或删除
+处理完成后：原文本身值得长期保留则移动到 `02_Library/`，否则删除。

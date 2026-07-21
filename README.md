@@ -90,7 +90,7 @@ cd my-brain
 │   ├── 00_Cards/      # 22 种原子化卡片 + 6 张示例
 │   ├── 01_Topics/     # 主题学习笔记（含 1 个示例主题）
 │   └── Frameworks/    # 可重复调用的方法论手册
-├── 05_References/     # 剪藏文章（Inbox → 分类 → 提炼 → 归档）
+├── 05_References/     # 剪藏消化（Inbox → 卡片/项目/行动 → 精选 Library）
 ├── 06_Tasks/          # Inbox 捕获 + 非项目任务管理
 ├── 07_Bases/          # Obsidian 数据库视图
 ├── Attachments/       # 附件统一存放
