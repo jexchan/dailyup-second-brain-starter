@@ -24,7 +24,10 @@ tags: [system, map, overview]
 ## 02_Daily
 每日记录、会话摘要、临时想法、最近进展
 
-新建 Daily Note 时建议使用 `.templates/Daily_Note.md` 模板。
+新建 Daily Note 时建议使用 `.templates/Daily_Note.md` 模板。模板只保留三个栏目：
+- `今日重点` — 当天选择的 1～3 个关注点
+- `今日记录` — 进展、问题、决定、输入和想法的统一记录区
+- `一句话总结` — 可选的日终收束
 
 ## 03_Projects
 具体项目资料，按项目组织

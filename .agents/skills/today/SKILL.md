@@ -18,7 +18,7 @@ description: Generate today's prioritized plan based on daily notes, tasks, and 
            ↓ 挑选
        Daily Note / 今日重点（今日承诺）
            ↓ 执行
-       Daily Note / 今日进展 + 回到来源更新状态
+       Daily Note / 今日记录 + 回到来源更新状态
 ```
 
 ---
@@ -49,8 +49,8 @@ description: Generate today's prioritized plan based on daily notes, tasks, and 
 
 提取：
 - `今日重点`（如果有）
-- `今日进展`（如果有）
-- `遇到的问题`（如果有）
+- `今日记录`（如果有）
+- `一句话总结`（如果有）
 
 ### Step 4: 扫描项目下一步
 
@@ -110,7 +110,7 @@ description: Generate today's prioritized plan based on daily notes, tasks, and 
 
 ### 晚上 (收尾)
 - 处理 Inbox（清空或分配任务）
-- 检查今日完成情况，记录到 `今日进展`
+- 检查今日完成情况，记录到“今日记录”
 - 为明天做准备
 
 ---

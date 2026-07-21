@@ -24,6 +24,7 @@ description: Weekly review to check progress across projects, courses, products,
 ### Step 3: 读取本周 Daily Notes
 
 从 `02_Daily/` 目录读取本周所有日期对应的 `.md` 文件。
+重点读取“今日重点”“今日记录”和“一句话总结”；根据内容语义识别进展、问题、决定和洞察，不依赖更多固定栏目。
 
 ### Step 4: 读取项目主页
 

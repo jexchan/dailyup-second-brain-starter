@@ -29,16 +29,16 @@ description: End-of-day review and reflection. Use this skill when the user asks
 
 ### Step 4: 读取独立任务（如存在）
 
-读取 `06_Tasks/Tasks.md`，对比今日进展与非项目任务的“下一步”和“等待”。
+读取 `06_Tasks/Tasks.md`，对比“今日记录”与非项目任务的“下一步”和“等待”。
 
 ### Step 5: 分析并生成回顾
 
 基于今日 Daily Note 的内容，分析：
 
-- **今日完成**：Daily Note 记录的完成结果、产出和决策
+- **今日完成**：从“今日记录”提取完成结果和产出
 - **今日推进**：即使未完成但有推进的事项
-- **新想法**：在"今日思考"中出现的洞察
-- **未完成事项**：尚未兑现的今日承诺、遇到的问题
+- **新想法**：从“今日记录”提取想法、输入和洞察
+- **未完成事项**：对比“今日重点”和“今日记录”，识别未兑现承诺及问题
 - **可延续内容**：值得保留在 Tasks 或项目“下一步”的内容
 
 ### Step 6: 生成一日总结
@@ -104,7 +104,7 @@ description: End-of-day review and reflection. Use this skill when the user asks
 
 - **默认只读**：仅展示回顾内容，不自动写入
 - **确认后写入**：用户明确确认后，才追加到今日 Daily Note
-- 追加位置：在今日 Daily Note 末尾添加 `---` 分隔线和回顾内容
+- 追加位置：优先更新“一句话总结”；需要完整回顾时，再在 Daily Note 末尾添加 `---` 分隔线和回顾内容
 
 ---
 
