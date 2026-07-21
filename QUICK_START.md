@@ -54,17 +54,14 @@ git commit -m "initial commit from starter"
 
 ## 第 3 步：填写你的个人上下文
 
-这是**最重要的一步**。花 10–15 分钟认真填写，AI 协作质量会好 10 倍。
+这是**最重要的一步**。花约 10 分钟填写，AI 才能结合你的真实情况协作。
 
-编辑 `01_Context/` 下这 5 个文件，把里面的 `<!-- ... -->` 占位替换成你自己的内容：
+编辑 `01_Context/` 下这 2 个文件：
 
 | 文件 | 填什么 |
 |---|---|
-| `About_Me.md` | 你是谁、你在做什么 |
-| `Mission_and_Vision.md` | 你的长期使命与愿景 |
-| `Brand_Voice.md` | 你希望 AI 帮你写作时用什么风格 |
-| `Audience_Profiles.md` | 你的内容写给谁看（如果不输出内容可以简写） |
-| `Current_Priorities.md` | 你最近 3 个月最重要的事 |
+| `About_Me.md` | 你是谁、长期方向、AI 协作偏好，以及可选的受众和表达风格 |
+| `Current_Priorities.md` | 当前目标、重点、活跃项目、关键问题和暂时不做 |
 
 > **小技巧**：如果一时写不全，先写粗糙版本。这是活文件，以后可以随时更新。
 
@@ -123,7 +120,7 @@ bash scripts/init.sh
 - 逐个确认是否删除 `_EXAMPLE_*` 示例文件
 - 删除 `_Example_Project/`
 - 为今天创建第一篇 Daily Note
-- 提醒你去填写 `01_Context/` 五件套
+- 提醒你填写 `01_Context/` 下的两个上下文文件
 
 如果你想跳过所有确认一键清理：
 

@@ -44,7 +44,7 @@
 | 痛点 | 本模板的做法 |
 |---|---|
 | 信息该放哪里？| `00_System/Vault_Map.md` 给出明确路由规则 |
-| AI 怎么理解我？| `CLAUDE.md` + `01_Context/` 五件套固定长期上下文 |
+| AI 怎么理解我？| `CLAUDE.md` + `01_Context/` 的稳定背景与当前重点 |
 | 怎么避免重复？| `.templates/` 提供统一模板，所有卡片/项目走同一个骨架 |
 | 知识怎么沉淀？| 22 种原子化卡片 + 双向链接构成知识网络 |
 | 每天怎么推进？| 内置 `/today`、`/closeday`、`/weekly-review` 三个常用 AI 技能 |
@@ -66,9 +66,8 @@ cd my-brain
 # 3. 用 Obsidian 打开这个文件夹
 #    Obsidian → Open folder as vault → 选择 my-brain/
 
-# 4. 填写你的个人上下文（5 个文件）
-#    编辑 01_Context/ 下的 About_Me / Mission_and_Vision /
-#    Brand_Voice / Audience_Profiles / Current_Priorities
+# 4. 填写你的个人上下文（2 个文件）
+#    编辑 01_Context/ 下的 About_Me / Current_Priorities
 
 # 5. 安装 AI 编码工具（推荐 Codex / ZCode），跑第一个 Skill
 #    /session-brief   → 让 AI 读懂你的 Vault
@@ -175,7 +174,7 @@ cd my-brain
 
 - 想认真搭建**长期使用**的第二大脑，而不是玩票
 - 已经在用 / 准备用 **AI 编码工具**（Codex / ZCode 等）
-- 愿意花 30 分钟把 5 个 Context 文件填好，换来 AI 长期精准协作
+- 愿意花 10 分钟填写稳定背景和当前重点，换来更准确的 AI 协作
 - 喜欢**文件优先、本地可控**的知识管理方式
 
 它**不**适合谁：

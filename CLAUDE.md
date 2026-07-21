@@ -36,11 +36,8 @@ last_updated: 2026-07-21
 > 这是一个知识库**模板**，请按以下步骤个性化：
 >
 > 1. 先去 `01_Context/` 目录填写你的真实信息：
->    - `About_Me.md`（我是谁）
->    - `Mission_and_Vision.md`（使命与愿景）
->    - `Brand_Voice.md`（品牌调性）
->    - `Audience_Profiles.md`（受众画像）
->    - `Current_Priorities.md`（当前优先级）
+>    - `About_Me.md`（我是谁、长期方向、协作偏好、可选受众与表达）
+>    - `Current_Priorities.md`（当前目标、重点、项目、问题和暂时不做）
 > 2. 完成后，可以直接对 AI 说：
 >    > "请阅读 `01_Context/` 下的所有文件，并根据我的真实情况更新 `CLAUDE.md` 中的『我的主要工作主题』部分。"
 > 3. AI 会基于你的上下文自动重写本节，使其反映你真正在做的事情。
@@ -63,14 +60,11 @@ last_updated: 2026-07-21
 - `AI_Workflow_Principles.md`：AI 的读写与工作原则
 
 ### `01_Context/`
-这里存放稳定的全局上下文。
-当任务涉及“我是谁、我在做什么、我的品牌、我的受众、我的长期方向”时，优先读取这里。
+这里存放长期稳定背景与当前动态重点。
+当任务涉及“我是谁、我在做什么、长期方向、受众、表达风格或当前优先级”时，优先读取这里。
 重点文件：
-- `About_Me.md`
-- `Mission_and_Vision.md`
-- `Brand_Voice.md`
-- `Audience_Profiles.md`
-- `Current_Priorities.md`
+- `About_Me.md` — 稳定背景与协作偏好
+- `Current_Priorities.md` — 当前 1～3 个月的重点
 
 ### `02_Daily/`
 这里存放每日记录。

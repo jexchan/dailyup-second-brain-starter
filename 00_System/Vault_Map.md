@@ -12,14 +12,12 @@ tags: [system, map, overview]
 - 见 `Writing_Rules.md` 中的"附件管理规则"章节
 
 ## 01_Context
-稳定的全局上下文：个人定位、使命、品牌、受众、当前优先级
+长期稳定背景与当前动态重点：
 
-首次使用时需要填写 `01_Context/` 下的占位模板：
-- `About_Me.md`
-- `Mission_and_Vision.md`
-- `Brand_Voice.md`
-- `Audience_Profiles.md`
-- `Current_Priorities.md`
+- `About_Me.md` — 我是谁、长期方向、AI 协作偏好，以及可选的受众与表达风格
+- `Current_Priorities.md` — 当前目标、重点、活跃项目、关键问题和暂时不做
+
+默认只维护这两个文件。受众、品牌或使命内容增长到明显需要独立维护时，再按需拆分。
 
 ## 02_Daily
 每日记录、会话摘要、临时想法、最近进展

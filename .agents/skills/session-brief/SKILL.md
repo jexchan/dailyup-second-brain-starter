@@ -42,9 +42,6 @@ Read the most relevant files in:
 
 Prefer:
 - `About_Me.md`
-- `Mission_and_Vision.md`
-- `Brand_Voice.md`
-- `Audience_Profiles.md`
 - `Current_Priorities.md`
 
 ### Recent continuity

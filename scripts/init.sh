@@ -116,7 +116,7 @@ echo
 echo "$(bold 'Step 3:') next steps"
 echo
 echo "  📝 Please fill in your personal context:"
-for f in About_Me Mission_and_Vision Brand_Voice Audience_Profiles Current_Priorities; do
+for f in About_Me Current_Priorities; do
   if [[ -f "01_Context/$f.md" ]]; then
     echo "     • 01_Context/$f.md"
   fi
