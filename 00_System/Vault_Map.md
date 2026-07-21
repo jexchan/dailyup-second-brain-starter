@@ -5,7 +5,14 @@ tags: [system, map, overview]
 # Vault Map
 
 ## 00_System
-系统级规则、导航、写作规范、命名规范、AI 工作原则
+系统级规则与导航：
+
+- `Vault_Map.md` — 目录职责和内容路由
+- `Task_Management_Rules.md` — Inbox、独立任务、项目任务与 Daily Note 的边界
+- `Writing_Rules.md` — 表达、Markdown、Frontmatter、来源与附件规范
+- `Naming_Conventions.md` — 文件、目录、项目和 Base 命名规范
+
+AI 的协作流程和写回原则统一维护在根目录 `CLAUDE.md`，不在这里重复维护。
 
 ### 附件管理
 - 所有附件存放到对应目录下的 `Attachments/` 文件夹

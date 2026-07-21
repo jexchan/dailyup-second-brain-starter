@@ -57,7 +57,7 @@ last_updated: 2026-07-21
 - `Vault_Map.md`：仓库结构地图
 - `Writing_Rules.md`：写作规则
 - `Naming_Conventions.md`：命名规范
-- `AI_Workflow_Principles.md`：AI 的读写与工作原则
+- `Task_Management_Rules.md`：任务流转与写回边界
 
 ### `01_Context/`
 这里存放长期稳定背景与当前动态重点。
@@ -176,7 +176,7 @@ last_updated: 2026-07-21
 - 优先延续现有结构，而不是另开平行结构
 
 具体规则请查看：
-- `00_System/Naming_Conventions`
+- `00_System/Naming_Conventions.md`
 
 ---
 

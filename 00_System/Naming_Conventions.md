@@ -34,3 +34,10 @@ tags: [system, naming, convention]
   - `Core_Principles.md`
   - `Obsidian_x_AI_Workflow.md`
   - `Learning_Product_Design.md`
+
+## Obsidian Base
+
+- 使用 `.base` 扩展名
+- 文件名使用 PascalCase，例如 `Books.base`、`Persons.base`
+- 全库视角的 Base 放在 `07_Bases/`
+- 领域专用的 Base 可放在对应主题或项目目录

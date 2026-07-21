@@ -17,7 +17,7 @@ description: 将当前 Obsidian Vault 中新增、删除、迁移、重命名或
 
 当前核心目录：
 
-- `00_System/` — 系统规则、导航、写作规范、命名规范、AI 工作原则、任务管理规则
+- `00_System/` — 系统地图、任务管理、写作规范和命名规范
 - `01_Context/` — 稳定全局上下文
 - `02_Daily/` — 每日记录和模板
 - `03_Projects/` — 项目资料和项目模板
@@ -32,7 +32,6 @@ description: 将当前 Obsidian Vault 中新增、删除、迁移、重命名或
 - `AGENTS.md` — 指向 `CLAUDE.md` 的符号链接，是 AI 入口说明
 - `CLAUDE.md` — 总导航和 AI 协作规则
 - `00_System/Vault_Map.md` — Vault 结构地图
-- `00_System/AI_Workflow_Principles.md` — AI 读写原则
 - `00_System/Writing_Rules.md` — 写作与附件规则
 - `00_System/Naming_Conventions.md` — 命名规则
 - `00_System/Task_Management_Rules.md` — 任务管理规则
@@ -104,7 +103,7 @@ description: 将当前 Obsidian Vault 中新增、删除、迁移、重命名或
 推荐落点：
 
 - 全局结构、目录职责、系统文件清单 → `00_System/Vault_Map.md`
-- AI 读写原则 → `00_System/AI_Workflow_Principles.md`
+- AI 读写与协作原则 → `CLAUDE.md`
 - 写作、附件、frontmatter 规则 → `00_System/Writing_Rules.md`
 - 命名规则 → `00_System/Naming_Conventions.md`
 - 总入口和协作规则 → `CLAUDE.md`
@@ -172,9 +171,9 @@ description: 将当前 Obsidian Vault 中新增、删除、迁移、重命名或
 - `AGENTS.md`
 - `CLAUDE.md`
 - `00_System/Vault_Map.md`
-- `00_System/AI_Workflow_Principles.md`
 - `00_System/Writing_Rules.md`
 - `00_System/Naming_Conventions.md`
+- `00_System/Task_Management_Rules.md`
 - `README.md`
 - `Skills_Manual.md`（如果存在，或任务涉及技能）
 
@@ -394,7 +393,6 @@ MOC 不更新条件：
 允许写入：
 
 - `00_System/Vault_Map.md`
-- `00_System/AI_Workflow_Principles.md`
 - `00_System/Writing_Rules.md`
 - `00_System/Naming_Conventions.md`
 - `00_System/Task_Management_Rules.md`

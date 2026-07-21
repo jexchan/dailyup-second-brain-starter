@@ -617,7 +617,9 @@ updated: 2026-07-21
 - `AGENTS.md`
 - `CLAUDE.md`
 - `00_System/Vault_Map.md`
-- `00_System/AI_Workflow_Principles.md`
+- `00_System/Task_Management_Rules.md`
+- `00_System/Writing_Rules.md`
+- `00_System/Naming_Conventions.md`
 - 根目录 `README.md`
 - `Skills_Manual.md`
 - 相关目录的 `README.md`

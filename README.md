@@ -81,7 +81,7 @@ cd my-brain
 
 ```
 .
-├── 00_System/         # 规则、导航、写作规范、AI 工作原则
+├── 00_System/         # 结构、任务、写作与命名规则
 ├── 01_Context/        # 全局上下文（你是谁、想做什么、写给谁看）
 ├── 02_Daily/          # 每日记录（含 Daily Note 模板）
 ├── 03_Projects/       # 轻量项目管理（单页模板 + 按需产出目录）
@@ -92,7 +92,7 @@ cd my-brain
 ├── 05_References/     # 剪藏消化（Inbox → 卡片/项目/行动 → 精选 Library）
 ├── 06_Tasks/          # Inbox 捕获 + 非项目任务管理
 ├── 07_Bases/          # Obsidian 数据库视图
-├── Attachments/       # 附件统一存放
+├── Attachments/       # 根目录内容的附件（按需使用）
 ├── .obsidian/         # Obsidian 配置（已精简）
 ├── .agents/skills/    # 通用 Agent 技能
 ├── CLAUDE.md          # AI 协作总导航（Claude 专用）
