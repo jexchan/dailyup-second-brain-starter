@@ -8,7 +8,7 @@ updated: 2026-07-21
 这份手册说明当前 Vault 自带的本地技能，帮助你知道在什么场景下可以直接对 AI 说什么，以及每个技能会读取哪些内容、产生什么结果、是否会写回知识库。
 
 当前统计口径：按 `.agents/skills/*/SKILL.md` 统计。  
-当前本地技能数量：13 个。
+当前本地技能数量：14 个。
 
 ---
 
@@ -45,7 +45,8 @@ updated: 2026-07-21
 | `session-brief` | 开始一次工作会话，快速恢复上下文 | 只读 | `01_Context/`, `02_Daily/`, `06_Tasks/`, `03_Projects/` | 不写入 |
 | `today` | 生成今日计划和优先级 | 只读 | `01_Context/`, `06_Tasks/`, `02_Daily/`, `03_Projects/*/Project.md` | 不写入 |
 | `closeday` | 做每日收尾和复盘 | 先只读，确认后写入 | `02_Daily/`, `03_Projects/`, `06_Tasks/` | 今日 Daily Note |
-| `weekly-review` | 做周回顾、总结本周进展 | 先只读，确认后写入 | 本周 Daily Notes, 项目 Next, `06_Tasks/` | `02_Daily/Week_YYYY-Www.md` |
+| `weekly-review` | 做周回顾、总结本周进展 | 先只读，确认后写入 | 本周 Daily Notes, 项目主页, `06_Tasks/` | `02_Daily/Week_YYYY-Www.md` |
+| `reading-coach` | 主动阅读、理解、质疑、内化并行动 | 按阅读阶段互动，明确要求后写入 | 用户提供的书籍、文章、论文、课程材料或笔记 | ACTOR 学习笔记 / 知识卡片 |
 | `card-creator` | 创建原子化知识卡片 | 写入 | 用户输入、卡片模板、已有卡片 | `04_Knowledge/00_Cards/` |
 | `spaced-review` | 管理知识卡片间隔复习 | 按请求读写 | 已启用 SRS 的知识卡片 | 卡片 frontmatter |
 | `brain-storming` | 围绕主题发散思考 | 先只读/输出，确认后沉淀 | `01_Context/`, 相关知识文件 | `04_Knowledge/` |
@@ -98,11 +99,16 @@ updated: 2026-07-21
 
 如果你有一段想法、摘录、概念或资源：
 
+- 用 `reading-coach` 在阅读前明确使命，在阅读中压缩和质疑，在阅读后检索、内化并行动。
 - 用 `card-creator` 创建原子化知识卡片。
 - 如果一段内容包含多个独立观点，技能会先建议拆分。
 - 创建后可以用 `spaced-review` 把重要卡片加入复习队列。
 
 示例：
+
+```text
+帮我用 ACTOR 框架真正学懂这篇文章。
+```
 
 ```text
 把这段内容创建成观点卡片：……
@@ -179,9 +185,9 @@ updated: 2026-07-21
 - `AGENTS.md`
 - `01_Context/`
 - 最近 7 篇 `02_Daily/`
-- `06_Tasks/This_Week.md`
+- `06_Tasks/Tasks.md`
 - `06_Tasks/Inbox.md`
-- 活跃项目的概览、下一步和决策文件
+- 活跃项目的 `Project.md`
 
 输出包括：
 
@@ -202,13 +208,14 @@ updated: 2026-07-21
 适合在这些时候使用：
 
 - 想知道今天最重要的 3 件事。
-- 需要把 Inbox、项目下一步和当前优先级整合成一天的行动顺序。
+- 需要把独立任务、项目下一步和当前优先级整合成一天的行动顺序。
 - 想检查今天的任务是否偏离长期重点。
 
 主要读取：
 
 - `01_Context/Current_Priorities.md`
 - `01_Context/About_Me.md`
+- `06_Tasks/Tasks.md`
 - `06_Tasks/Inbox.md`
 - 今日 Daily Note：`02_Daily/YYYY-MM-DD.md`
 - `03_Projects/*/Project.md`
@@ -239,7 +246,7 @@ updated: 2026-07-21
 
 - 今日 Daily Note：`02_Daily/YYYY-MM-DD.md`
 - `03_Projects/*/Project.md`
-- `06_Tasks/This_Week.md`
+- `06_Tasks/Tasks.md`
 
 输出包括：
 
@@ -268,6 +275,7 @@ updated: 2026-07-21
 
 - 本周 `02_Daily/YYYY-MM-DD.md`
 - `03_Projects/*/Project.md`
+- `06_Tasks/Tasks.md`
 - `06_Tasks/Inbox.md`
 
 输出包括：
@@ -281,6 +289,34 @@ updated: 2026-07-21
 - 按项目分类的进展
 
 写回规则：默认只展示。用户确认后写入 `02_Daily/Week_YYYY-Www.md`。
+
+---
+
+### `reading-coach`
+
+用途：把 AI 作为主动阅读教练，帮助用户理解、质疑、记住并应用书籍、文章、论文、课程材料或概念，而不是用摘要替代阅读。
+
+适合在这些时候使用：
+
+- 阅读前明确目的、问题和阅读策略。
+- 阅读中梳理论证结构、困惑、反对意见和重点。
+- 阅读后进行复述测试、建立连接并制定行动实验。
+- 将阅读结果整理为 ACTOR 学习笔记或 Obsidian 知识卡片。
+
+核心流程：
+
+1. **Aim**：明确这次阅读要服务的决定、问题或能力。
+2. **Compress**：找出主干、分支和必要证据。
+3. **Test**：检查作者、读者和具体情境中的假设与边界。
+4. **Own**：用自己的话复述，通过检索问题确认真正掌握。
+5. **Run**：转化为决定、规则、清单或 24～72 小时内可执行的实验。
+
+主要读取：
+
+- 用户提供的原文、文件、摘录、笔记或课程材料
+- 用户指定的相关 Vault 内容
+
+写回规则：默认互动和输出，不自动写入；用户明确要求保存或创建卡片时，再遵循 Vault 模板和写回规则。
 
 ---
 

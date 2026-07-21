@@ -1,51 +1,24 @@
 ---
 title: Inbox
-description: Quick capture inbox for tasks and ideas
-tags: [task, inbox]
+description: 尚未分类的新任务入口
+tags:
+  - task
+  - inbox
 ---
 
 # Inbox
 
-> [!INFO] Processing Routine
-> Process inbox daily using the 5D rule:
-> 1. **Do (2 min)** → Do it now
-> 2. **Delegate** → Move to appropriate owner
-> 3. **Defer** → Schedule or move to a project
-> 4. **Delete** → Not worth doing
-> 5. **Someday** → Move to Someday/Maybe
+> [!info] 使用方式
+> 随手记下尚未判断归属的新任务，定期处理并尽量清空。
 
----
-
-## Tasks
-
-### Do Now / Quick Wins
-> Things you can finish in under 2 minutes — do them immediately.
+## 待处理
 
 - [ ]
 
-### To Process
-> New captures waiting to be triaged. Clear daily.
+## 处理规则
 
-- [ ]
-
-### Waiting For
-> Blocked on other people or external conditions.
-
-- [ ]
-
-### Someday / Maybe
-> Might do someday, but not now.
-
-- [ ]
-
----
-
-## Ideas
-> Raw ideas captured quickly. Triage and promote to cards or projects.
-
--
-
-## Links
-> Read later.
-
--
+- 2 分钟内能完成 → 立即完成
+- 属于某个项目 → 移到对应项目的 `Project.md`
+- 不属于项目但需要持续跟踪 → 移到 [[Tasks]]
+- 只是灵感或知识 → 移到 Daily Note 或 `04_Knowledge/`
+- 不再需要 → 删除

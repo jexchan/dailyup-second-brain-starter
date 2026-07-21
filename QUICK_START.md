@@ -92,7 +92,7 @@ AI 会读取 `AGENTS.md` / `CLAUDE.md` → `01_Context/` → 最近的 Daily Not
 /today
 ```
 
-AI 会基于你填好的 `Current_Priorities.md` + `06_Tasks/Inbox.md` + `03_Projects/*/Project.md`，生成一份今日聚焦计划。
+AI 会基于你填好的 `Current_Priorities.md` + `06_Tasks/Tasks.md` + `06_Tasks/Inbox.md` + `03_Projects/*/Project.md`，生成一份今日聚焦计划。
 
 ---
 

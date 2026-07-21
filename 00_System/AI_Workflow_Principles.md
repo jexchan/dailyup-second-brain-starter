@@ -19,6 +19,8 @@ tags: [system, ai, workflow]
 
 ## 写的优先级
 - 项目决策与下一步 → 项目 `Project.md`
+- 尚未分类的新任务 → `06_Tasks/Inbox.md`
+- 非项目任务 → `06_Tasks/Tasks.md`
 - 新规则 → `Writing_Rules.md` 或相关规则文件
 - 当日进展 → 对应 Daily Note
 - 长期知识 → `04_Knowledge/`

@@ -5,20 +5,20 @@ description: Generate today's prioritized plan based on daily notes, tasks, and 
 
 # Today: Daily Plan Generator
 
-生成基于当前上下文的今日优先计划。这个技能整合你的 Daily Note、Inbox 和项目 Next Actions，输出一个清晰的今日行动计划。
+生成基于当前上下文的今日优先计划。这个技能整合 Daily Note、独立任务和项目下一步，输出一个清晰的今日行动计划。
 
 ---
 
 ## 任务流向理解
 
 ```
-新想法/任务 → Inbox (快速捕获，每日清空)
-                ↓ 处理
-            Project/Next_Actions (项目归属)
-                ↓ 挑选
-            Daily Note/今日重点 (今天做)
-                ↓ 完成
-            Daily Note/今日进展 (已做完)
+新任务 → Inbox（快速捕获）
+           ↓ 处理
+       Tasks.md（独立任务）或 Project.md（项目任务）
+           ↓ 挑选
+       Daily Note / 今日重点（今日承诺）
+           ↓ 执行
+       Daily Note / 今日进展 + 回到来源更新状态
 ```
 
 ---
@@ -36,9 +36,8 @@ description: Generate today's prioritized plan based on daily notes, tasks, and 
 
 ### Step 2: 读取任务管理文件
 
-1. **06_Tasks/Inbox.md** — 获取待处理的任务
-   - `Do Now / Quick Wins` — 2分钟内可完成
-   - `To Process` — 待分配/排期的任务
+1. **06_Tasks/Tasks.md** — 获取非项目任务的“下一步”和“等待”
+2. **06_Tasks/Inbox.md** — 检查尚未分类的新任务
 
 > 注意：Inbox 是快速捕获入口，每日应清空。里面的任务需要处理后移走。
 
@@ -50,7 +49,7 @@ description: Generate today's prioritized plan based on daily notes, tasks, and 
 
 提取：
 - `今日重点`（如果有）
-- `下一步`（如果有）
+- `今日进展`（如果有）
 - `遇到的问题`（如果有）
 
 ### Step 4: 扫描项目下一步
@@ -66,7 +65,7 @@ description: Generate today's prioritized plan based on daily notes, tasks, and 
 
 综合以上信息，将任务分为三个优先级：
 
-- **Must Do**：来自项目“下一步”、有明确截止、阻塞他人工作、或用户明确要求的任务
+- **Must Do**：来自 Tasks 或项目“下一步”、有明确截止、阻塞他人工作、或用户明确要求的任务
 - **Should Do**：重要但不紧急、推进核心项目的事务
 - **Could Do**：低优先级、可以延后的任务
 
@@ -161,7 +160,7 @@ description: Generate today's prioritized plan based on daily notes, tasks, and 
 
 ## 优先级排序原则
 
-- **项目当前冲刺** > **Inbox 快速完成项** > **项目其他任务** > **随机想法**
+- **明确截止或阻塞项** > **项目与独立任务的下一步** > **Inbox 待处理项** > **随机想法**
 - **紧急且重要** > **重要不紧急** > **紧急不重要**
 - 如果用户今天有自己的计划安排，尊重并整合，而不是完全覆盖
 - 考虑用户的精力曲线：深度工作放在上午
@@ -185,4 +184,4 @@ description: Generate today's prioritized plan based on daily notes, tasks, and 
 - **只读模式**：不要修改任何文件，仅生成计划
 - 明确指出哪些任务应该避免（分心、低价值）
 - 如果今日 Daily Note 不存在，可以建议用户创建
-- **Inbox 不是长期仓库**：提醒用户 Inbox 中的任务应该被处理（完成、移到项目、或删除）
+- **Inbox 不是长期仓库**：提醒用户 Inbox 中的任务应该被处理（完成、移到 Tasks/项目、或删除）

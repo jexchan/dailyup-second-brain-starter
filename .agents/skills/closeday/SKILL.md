@@ -1,6 +1,6 @@
 ---
 name: closeday
-description: End-of-day review and reflection. Use this skill when the user asks to close the day, end the day, do a daily review, reflect on today, summarize today's work, or wrap up the day. This skill reads today's Daily Note and projects' Next Actions to generate a structured review with completed items, insights, and tomorrow's priorities.
+description: End-of-day review and reflection. Use this skill when the user asks to close the day, end the day, do a daily review, reflect on today, summarize today's work, or wrap up the day. This skill reads today's Daily Note, independent tasks, and project next actions to generate a structured review with completed items, insights, and tomorrow's priorities.
 ---
 
 # Close Day: Daily Review
@@ -27,19 +27,19 @@ description: End-of-day review and reflection. Use this skill when the user asks
 
 检查 `03_Projects/` 下各项目的 `Project.md`，识别“下一步”中今日可能推进的项目任务。
 
-### Step 4: 读取本周任务（可选）
+### Step 4: 读取独立任务（如存在）
 
-读取 `06_Tasks/This_Week.md`，对比今日进展与本周重点。
+读取 `06_Tasks/Tasks.md`，对比今日进展与非项目任务的“下一步”和“等待”。
 
 ### Step 5: 分析并生成回顾
 
 基于今日 Daily Note 的内容，分析：
 
-- **今日完成**：勾选完成的任务、产出的内容、做出的决策
+- **今日完成**：Daily Note 记录的完成结果、产出和决策
 - **今日推进**：即使未完成但有推进的事项
 - **新想法**：在"今日思考"中出现的洞察
-- **未完成事项**：未勾选的任务、遇到的问题
-- **可延续内容**：值得放入明日或项目“下一步”的内容
+- **未完成事项**：尚未兑现的今日承诺、遇到的问题
+- **可延续内容**：值得保留在 Tasks 或项目“下一步”的内容
 
 ### Step 6: 生成一日总结
 
@@ -139,4 +139,4 @@ A: 提示用户先创建今日 Daily Note，或基于模板自动创建
 A: 诚实输出，不强求"充实"。少量进展也是进展
 
 **Q: 如何判断哪些应该延续至明日？**
-A: 优先级判断：(1) 今日未完成的重点事项 (2) 跨天依赖的任务 (3) 用户明确标注的"下一步"
+A: 优先级判断：(1) 今日未完成的重点事项 (2) Tasks/项目中的跨天依赖 (3) 用户明确确认的明日重点

@@ -1,6 +1,6 @@
 ---
 name: weekly-review
-description: Weekly review to check progress across projects, courses, and products. Use this skill when the user asks for weekly review, weekly recap, week summary, check weekly progress, review the week, or wants to see what happened this week. This skill reads the week's Daily Notes and project Next_Actions to generate a structured weekly summary with completed items, ongoing work, and next week's priorities.
+description: Weekly review to check progress across projects, courses, products, and independent tasks. Use this skill when the user asks for weekly review, weekly recap, week summary, check weekly progress, review the week, or wants to see what happened this week. This skill reads the week's Daily Notes, independent tasks, and project pages to generate a structured weekly summary with completed items, ongoing work, and next week's priorities.
 ---
 
 # 周回顾 (Weekly Review)
@@ -35,10 +35,9 @@ description: Weekly review to check progress across projects, courses, and produ
 
 ### Step 5: 读取任务清单
 
-读取 `06_Tasks/Inbox.md`，识别：
-- 本周完成的任务
-- 本周新增的任务
-- 待处理的任务
+读取：
+- `06_Tasks/Tasks.md` — 独立任务的下一步、等待和最近完成
+- `06_Tasks/Inbox.md` — 尚未分类、需要处理的新任务
 
 ### Step 6: 分析并生成周回顾
 
@@ -178,4 +177,4 @@ A: 跳过该天，在输出中说明缺失的日期
 A: 诚实输出，不强求"充实"。少量进展也是进展
 
 **Q: 如何判断哪些应该是下周重点？**
-A: 优先级判断：(1) 本周未完成的重要事项 (2) 有明确截止日期的任务 (3) 项目 Next_Actions 中标注优先的事项
+A: 优先级判断：(1) 本周未完成的重要事项 (2) 有明确截止日期的任务 (3) 项目 `Project.md`“下一步”中标注优先的事项

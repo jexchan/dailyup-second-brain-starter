@@ -55,15 +55,12 @@ If fewer than 7 exist, read what is available.
 
 ### Current tasks
 Read if present:
-- `06_Tasks/This_Week.md`
+- `06_Tasks/Tasks.md`
 - `06_Tasks/Inbox.md`
 
 ### Active projects
 Scan `03_Projects/` for likely active projects.
-For each relevant active project, prefer:
-1. `Overview.md`
-2. `Next_Actions.md`
-3. `Decisions.md`
+For each relevant active project, read `Project.md`, especially its current status, next actions, backlog, progress, and decisions.
 
 Do not scan archived or irrelevant material unless needed.
 

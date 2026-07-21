@@ -10,9 +10,9 @@
 
 一套可以直接用的 Obsidian Vault 框架，包含：
 
-- **7 个主目录的信息架构** — 系统规则 / 上下文 / 日记 / 项目 / 知识 / 参考 / 任务
+- **8 个主目录的信息架构** — 系统规则 / 上下文 / 日记 / 项目 / 知识 / 参考 / 任务 / Bases
 - **22 种原子化卡片模板** — insight / book / mentalmodel / person / tool / quote …
-- **13 个开箱即用的 AI 技能（Skills）** — `/today`、`/weekly-review`、`/closeday`、`/card-creator`、`/critical-check` 等
+- **14 个开箱即用的 AI 技能（Skills）** — `/today`、`/weekly-review`、`/closeday`、`/reading-coach`、`/card-creator` 等
 - **完整的 AI 协作规则** — CLAUDE.md + AGENTS.md 让任意支持该协议的 AI 编码工具立刻理解你的知识库
 - **Obsidian Bases 数据库视图** — Books、Persons、Resources、Opensource、Subscriptions
 - **清晰的写作规范、命名规范和任务管理规则**
@@ -91,7 +91,7 @@ cd my-brain
 │   ├── 01_Topics/     # 主题学习笔记（含 1 个示例主题）
 │   └── Frameworks/    # 可重复调用的方法论手册
 ├── 05_References/     # 剪藏文章（Inbox → 分类 → 提炼 → 归档）
-├── 06_Tasks/          # 任务收集（Inbox / This_Week / Waiting）
+├── 06_Tasks/          # Inbox 捕获 + 非项目任务管理
 ├── 07_Bases/          # Obsidian 数据库视图
 ├── Attachments/       # 附件统一存放
 ├── .obsidian/         # Obsidian 配置（已精简）
@@ -112,6 +112,7 @@ cd my-brain
 | `today` | 根据任务和优先级生成今日计划 | "今日计划怎么安排" |
 | `closeday` | 日终复盘 | "帮我结束今天" |
 | `weekly-review` | 周度回顾与下周规划 | "做个周报" |
+| `reading-coach` | 用 ACTOR 框架主动阅读与学习 | "帮我真正学懂这篇内容" |
 | `card-creator` | 根据输入自动创建对应类型的卡片 | "帮我建一张卡" |
 | `brain-storming` | 围绕一个主题多维度发散 | "头脑风暴 X" |
 | `random-thinking` | 跨主题随机抽卡做关联思考 | "给点灵感" |

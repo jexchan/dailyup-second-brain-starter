@@ -1,113 +1,93 @@
 ---
-description: Rules for managing tasks across Inbox, Daily Notes, and Projects
+description: Rules for managing tasks across Inbox, Tasks, Projects, and Daily Notes
 tags: [system, task, gtd]
 created: 2026-04-11
+updated: 2026-07-21
 ---
 
 # Task Management Rules
 
 ## 核心原则
 
-> 一个任务只放一个地方，职责清晰，流动顺畅。
+> 一个任务只维护一个正式状态：先捕获，再归位，最后在 Daily Note 中记录当天的选择和结果。
 
-## 两个位置的职责
+## 四个位置的职责
 
 ### Inbox (`06_Tasks/Inbox.md`)
-**职责：纯粹的任务入口，快速捕获**
 
-- ✅ 快速记录任何新想法、新任务
-- ✅ 临时存放待处理事项
-- ❌ 不要放长期任务
-- ❌ 不要放已有项目归属的任务
+**职责：尚未分类的新任务入口。**
 
-**处理频率**：每日一次，清空 Inbox
+- 快速记录新任务
+- 定期处理并尽量清空
+- 不保存长期任务、等待事项、Someday 或资料链接
 
-**处理选项**（2分钟规则）：
-1. **Do** → 2分钟能做完，立即做
-2. **Delegate** → 委托给他人
-3. **Defer** → 移到项目 `Project.md` 的“下一步”或排期到 Daily Note
-4. **Delete** → 不值得做，删除
-5. **Someday** → 移到 Someday/Maybe
+### Tasks (`06_Tasks/Tasks.md`)
 
----
+**职责：不属于具体项目的长期任务。**
 
-### Daily Note (`02_Daily/YYYY-MM-DD.md`)
-**职责：今天的选择 —— 聚焦当天**
-
-- `今日重点`：今天要做的 1-3 件事（从 Inbox/Project 选取）
-- `下一步`：今天未完、明天继续的（睡前移走）
-- ✅ 当天聚焦，避免分心
-- ❌ 不要管理长期任务
-- ❌ 不要放未分配的项目任务
-
-**日终处理**：
-- 完成的 → 记录到 `今日进展`
-- 未完的 → 移回项目或排期到明天
-- 不要让任务在 Daily Note 中堆积
-
----
+- “下一步”保存当前可执行的独立任务
+- “等待”保存依赖他人或外部条件的事项
+- “以后可能”保存尚未承诺的事项
+- 不重复保存项目任务
 
 ### Project (`03_Projects/项目名/Project.md`)
-**职责：项目级待办，有归属的任务**
 
-- 所有有明确项目归属的任务
-- 长期存在，有上下文
-- 从 Inbox 处理后移入
-- Daily Note 从这里选取今天要做的
-- “下一步”只保留当前最重要的 1～3 项，其余放入同页 Backlog
+**职责：有明确项目归属的任务。**
 
----
+- “下一步”只保留当前最重要的 1～3 项
+- 其余项目任务放入同页 Backlog
+- 项目任务的完成状态只在项目主页更新
 
-## 任务流向图
+### Daily Note (`02_Daily/YYYY-MM-DD.md`)
 
+**职责：当天的选择和执行记录。**
+
+- “今日重点”列出从 Tasks 或项目中选出的 1～3 个承诺
+- “今日进展”记录当天实际完成或推进的结果
+- 不承担长期任务管理，不设置跨日“下一步”清单
+- 正式任务的完成状态回到 `Tasks.md` 或项目 `Project.md` 更新
+
+## 任务流向
+
+```text
+新任务
+  ↓
+Inbox
+  ├─→ 属于项目 → Project.md
+  ├─→ 独立任务 → Tasks.md
+  ├─→ 2 分钟完成 / 删除
+  └─→ 灵感或知识 → Daily / Knowledge
+
+Tasks.md 或 Project.md
+  ↓ 选择今天最重要的 1～3 项
+Daily Note / 今日重点
+  ↓ 执行
+Daily Note / 今日进展 + 回到任务来源更新状态
 ```
-新任务/想法
-    ↓
-Inbox (快速捕获)
-    ↓ 每日处理
-    ├─→ 2分钟 → 立即完成
-    ├─→ 不值得 → 删除
-    ├─→ 有项目 → Project.md/下一步或 Backlog
-    └─→ 今天做 → Daily Note/今日重点
-              ↓ 完成
-          Daily Note/今日进展
-```
-
-```
-Project.md/下一步
-    ↓ 每日挑选
-Daily Note/今日重点
-    ↓ 完成
-Daily Note/今日进展
-```
-
----
 
 ## 判断规则
 
 | 问题 | 放哪里 |
-|------|--------|
-| 刚想到的新任务？ | Inbox |
-| 这个任务属于哪个项目？ | Project.md 的“下一步”或 Backlog |
-| 今天一定要做的是什么？ | Daily Note/今日重点 |
-| 这个任务没做完怎么办？ | 移回项目或明天 Daily Note |
-| 长期跟踪的项目任务？ | Project.md，不是 Inbox |
-
----
+|---|---|
+| 刚想到、尚未分类？ | `Inbox.md` |
+| 属于明确项目？ | 项目 `Project.md` |
+| 不属于项目但需要持续跟踪？ | `Tasks.md` |
+| 今天决定投入什么？ | Daily Note“今日重点” |
+| 今天实际完成或推进了什么？ | Daily Note“今日进展” |
+| 今天没做完怎么办？ | 保留或退回正式任务来源，不滚动复制 Daily |
 
 ## 避免的模式
 
-- ❌ Inbox 变成长期任务仓库
-- ❌ Daily Note 堆积大量未完成任务
-- ❌ 同一个任务在多处重复
-- ❌ 不知道任务该放哪里就随便放
-
----
+- Inbox 变成长期任务仓库
+- 同一个任务同时出现在 Tasks 和项目中
+- Daily Note 成为第二份任务数据库
+- 每天复制未完成任务，形成重复和残留
+- 为了状态分类创建过多任务文件
 
 ## AI 写回规则
 
-当 AI 需要记录任务时：
-- 新捕获的任务 → `06_Tasks/Inbox.md`
-- 项目相关任务 → `03_Projects/项目名/Project.md`
-- 今天确认要做的 → 当日 Daily Note `今日重点`
-- 完成的任务 → 当日 Daily Note `今日进展`
+- 新捕获、尚未判断归属 → `06_Tasks/Inbox.md`
+- 非项目任务 → `06_Tasks/Tasks.md`
+- 项目任务 → 对应项目的 `Project.md`
+- 用户确认的今日承诺 → 当日 Daily Note“今日重点”
+- 当日结果与进展 → 当日 Daily Note“今日进展”

@@ -70,7 +70,11 @@ tags: [system, map, overview]
 网上剪藏 → Inbox → 阅读/分类 → 提炼卡片 → 归档/删除
 
 ## 06_Tasks
-任务收集、本周重点、等待项
+全局任务入口与非项目任务管理：
+- `Inbox.md` — 尚未分类的新任务，定期处理并尽量清空
+- `Tasks.md` — 不属于具体项目的下一步、等待事项和以后可能
+
+项目任务保留在对应项目的 `Project.md`；Daily Note 只记录当天的选择和执行结果。
 
 ## 07_Bases
 Obsidian Base 数据库视图
