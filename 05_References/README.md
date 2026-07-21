@@ -79,9 +79,9 @@ tags:
 ---
 title: "文章标题"
 author: "作者"
-source_url: "https://example.com/article"
-published_at:
-clipped_at: "YYYY-MM-DD"
+source: "https://example.com/article"
+published:
+clipped: "YYYY-MM-DD"
 tags:
   - reference
 ---

@@ -1,9 +1,9 @@
 ---
 title: "How to Take Smart Notes（示例剪藏）"
 author: "Example Author"
-source_url: "https://example.com/how-to-take-smart-notes"
-published_at:
-clipped_at: 2025-01-01
+source: "https://example.com/how-to-take-smart-notes"
+published:
+clipped: 2025-01-01
 tags:
   - reference
   - example
