@@ -1,7 +1,7 @@
 ---
 description: 本地 AI 技能说明手册
 tags: [system, skills, manual]
-updated: 2026-07-03
+updated: 2026-07-21
 ---
 # Skills Manual
 
@@ -43,7 +43,7 @@ updated: 2026-07-03
 | 技能 | 适合场景 | 默认行为 | 主要读取位置 | 可能写入位置 |
 |---|---|---|---|---|
 | `session-brief` | 开始一次工作会话，快速恢复上下文 | 只读 | `01_Context/`, `02_Daily/`, `06_Tasks/`, `03_Projects/` | 不写入 |
-| `today` | 生成今日计划和优先级 | 只读 | `01_Context/`, `06_Tasks/`, `02_Daily/`, `03_Projects/*/04_Next.md` | 不写入 |
+| `today` | 生成今日计划和优先级 | 只读 | `01_Context/`, `06_Tasks/`, `02_Daily/`, `03_Projects/*/Project.md` | 不写入 |
 | `closeday` | 做每日收尾和复盘 | 先只读，确认后写入 | `02_Daily/`, `03_Projects/`, `06_Tasks/` | 今日 Daily Note |
 | `weekly-review` | 做周回顾、总结本周进展 | 先只读，确认后写入 | 本周 Daily Notes, 项目 Next, `06_Tasks/` | `02_Daily/Week_YYYY-Www.md` |
 | `card-creator` | 创建原子化知识卡片 | 写入 | 用户输入、卡片模板、已有卡片 | `04_Knowledge/00_Cards/` |
@@ -211,7 +211,7 @@ updated: 2026-07-03
 - `01_Context/About_Me.md`
 - `06_Tasks/Inbox.md`
 - 今日 Daily Note：`02_Daily/YYYY-MM-DD.md`
-- `03_Projects/*/04_Next.md`
+- `03_Projects/*/Project.md`
 
 输出包括：
 
@@ -238,7 +238,7 @@ updated: 2026-07-03
 主要读取：
 
 - 今日 Daily Note：`02_Daily/YYYY-MM-DD.md`
-- `03_Projects/*/04_Next.md`
+- `03_Projects/*/Project.md`
 - `06_Tasks/This_Week.md`
 
 输出包括：
@@ -267,7 +267,7 @@ updated: 2026-07-03
 主要读取：
 
 - 本周 `02_Daily/YYYY-MM-DD.md`
-- `03_Projects/*/04_Next.md`
+- `03_Projects/*/Project.md`
 - `06_Tasks/Inbox.md`
 
 输出包括：
@@ -533,7 +533,7 @@ updated: 2026-07-03
 
 每个重要质疑会标注确信度：比较可靠 / 需要澄清 / 风险较高。
 
-写回规则：默认只读。用户确认后，可追加到原卡片的反思区，或新建 `question` / `insight` 卡片，或写入对应项目的 `01_Planning.md` / `04_Next.md`。
+写回规则：默认只读。用户确认后，可追加到原卡片的反思区，或新建 `question` / `insight` 卡片，或写入对应项目的 `Project.md`。
 
 ---
 

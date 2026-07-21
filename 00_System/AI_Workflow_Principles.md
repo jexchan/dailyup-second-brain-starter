@@ -18,8 +18,7 @@ tags: [system, ai, workflow]
 5. 相关 Resource / Skill 文件
 
 ## 写的优先级
-- 项目决策 → 项目 `00_Overview.md` 或 `01_Planning.md`
-- 项目下一步 → 项目 `04_Next.md`
+- 项目决策与下一步 → 项目 `Project.md`
 - 新规则 → `Writing_Rules.md` 或相关规则文件
 - 当日进展 → 对应 Daily Note
 - 长期知识 → `04_Knowledge/`

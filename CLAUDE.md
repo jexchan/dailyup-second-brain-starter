@@ -1,7 +1,7 @@
 ---
 description: System configuration for AI assistants working with this vault
 version: 1.0.0
-last_updated: 2026-03-29
+last_updated: 2026-07-21
 ---
 # CLAUDE.md
 
@@ -78,10 +78,7 @@ last_updated: 2026-03-29
 
 ### `03_Projects/`
 这里存放具体项目。
-当任务与某个项目有关时，优先进入对应项目目录，并按以下顺序阅读：
-1. `00_Overview.md`
-2. `02_Goals.md`
-3. `04_Next.md`
+当任务与某个项目有关时，优先读取对应目录下的 `Project.md`。该文件集中保存项目定义、完成标准、当前状态、下一步、Backlog、里程碑、进展和决策。项目产出按需放入 `Outputs/`。
 
 ### `04_Knowledge/`
 这里存放长期知识沉淀。
@@ -141,8 +138,7 @@ last_updated: 2026-03-29
 - 正在整理本周任务
 
 写回时请遵循：
-- 决策 → 写入项目下的 `00_Overview.md` 或 `01_Planning.md`
-- 下一步动作 → 写入项目下的 `04_Next.md`
+- 项目决策与下一步动作 → 写入项目下的 `Project.md`
 - 最近动态 → 写入当日 `02_Daily/日期.md`
 - 长期规则 → 写入 `00_System/Writing_Rules.md` 或对应规则文件
 - 长期知识 → 写入 `04_Knowledge/` 对应主题文件

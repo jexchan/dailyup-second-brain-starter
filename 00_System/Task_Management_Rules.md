@@ -25,7 +25,7 @@ created: 2026-04-11
 **处理选项**（2分钟规则）：
 1. **Do** → 2分钟能做完，立即做
 2. **Delegate** → 委托给他人
-3. **Defer** → 移到项目 04_Next 或排期到 Daily Note
+3. **Defer** → 移到项目 `Project.md` 的“下一步”或排期到 Daily Note
 4. **Delete** → 不值得做，删除
 5. **Someday** → 移到 Someday/Maybe
 
@@ -47,13 +47,14 @@ created: 2026-04-11
 
 ---
 
-### Project Next (`03_Projects/项目名/04_Next.md`)
+### Project (`03_Projects/项目名/Project.md`)
 **职责：项目级待办，有归属的任务**
 
 - 所有有明确项目归属的任务
 - 长期存在，有上下文
 - 从 Inbox 处理后移入
 - Daily Note 从这里选取今天要做的
+- “下一步”只保留当前最重要的 1～3 项，其余放入同页 Backlog
 
 ---
 
@@ -66,14 +67,14 @@ Inbox (快速捕获)
     ↓ 每日处理
     ├─→ 2分钟 → 立即完成
     ├─→ 不值得 → 删除
-    ├─→ 有项目 → Project/04_Next.md
+    ├─→ 有项目 → Project.md/下一步或 Backlog
     └─→ 今天做 → Daily Note/今日重点
               ↓ 完成
           Daily Note/今日进展
 ```
 
 ```
-Project/04_Next.md
+Project.md/下一步
     ↓ 每日挑选
 Daily Note/今日重点
     ↓ 完成
@@ -87,10 +88,10 @@ Daily Note/今日进展
 | 问题 | 放哪里 |
 |------|--------|
 | 刚想到的新任务？ | Inbox |
-| 这个任务属于哪个项目？ | Project/04_Next.md |
+| 这个任务属于哪个项目？ | Project.md 的“下一步”或 Backlog |
 | 今天一定要做的是什么？ | Daily Note/今日重点 |
 | 这个任务没做完怎么办？ | 移回项目或明天 Daily Note |
-| 长期跟踪的项目任务？ | Project/04_Next.md，不是 Inbox |
+| 长期跟踪的项目任务？ | Project.md，不是 Inbox |
 
 ---
 
@@ -107,6 +108,6 @@ Daily Note/今日进展
 
 当 AI 需要记录任务时：
 - 新捕获的任务 → `06_Tasks/Inbox.md`
-- 项目相关任务 → `03_Projects/项目名/04_Next.md`
+- 项目相关任务 → `03_Projects/项目名/Project.md`
 - 今天确认要做的 → 当日 Daily Note `今日重点`
 - 完成的任务 → 当日 Daily Note `今日进展`

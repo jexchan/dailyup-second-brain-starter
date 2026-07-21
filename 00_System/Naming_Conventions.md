@@ -21,14 +21,8 @@ tags: [system, naming, convention]
   - `Blog_Writing`
 
 ## 项目内部标准文件
-- `00_Overview.md` — 项目基本概况
-- `01_Planning.md` — 项目计划与路线图
-- `02_Goals.md` — 目标设定
-- `03_Backlog.md` — 待办事项池
-- `04_Next.md` — 下一步要做的任务
-- `05_Doing.md` — 正在进行的任务
-- `06_Testing.md` — 校验/测试中的任务
-- `07_Done.md` — 已完成的任务
+- `Project.md` — 项目的唯一入口，集中保存定义、完成标准、任务、进展和决策
+- `Outputs/` — 有真实产出时才创建；子目录按内容增长情况拆分
 
 ## 长期主题知识文件
 - 文件名应该描述主题本身，而不是某次聊天

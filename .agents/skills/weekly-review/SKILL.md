@@ -25,9 +25,9 @@ description: Weekly review to check progress across projects, courses, and produ
 
 从 `02_Daily/` 目录读取本周所有日期对应的 `.md` 文件。
 
-### Step 4: 读取项目 Next_Actions
+### Step 4: 读取项目主页
 
-扫描 `03_Projects/` 下所有项目的 `04_Next.md`，识别：
+扫描 `03_Projects/` 下所有项目的 `Project.md`，重点读取“当前状态”“下一步”“Backlog”和“进展与决策”，识别：
 - 本周完成的任务
 - 本周推进的事项
 - 仍在进行中的工作

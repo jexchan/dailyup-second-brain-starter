@@ -23,9 +23,9 @@ description: End-of-day review and reflection. Use this skill when the user asks
 - 文件名格式：`YYYY-MM-DD.md`
 - 读取模板参考：`02_Daily/.templates/Daily_Note.md`（如果存在）
 
-### Step 3: 读取项目 Next_Actions（如存在）
+### Step 3: 读取项目下一步（如存在）
 
-检查 `03_Projects/` 下各项目的 `04_Next.md`，识别今日可能推进的项目任务。
+检查 `03_Projects/` 下各项目的 `Project.md`，识别“下一步”中今日可能推进的项目任务。
 
 ### Step 4: 读取本周任务（可选）
 
@@ -39,7 +39,7 @@ description: End-of-day review and reflection. Use this skill when the user asks
 - **今日推进**：即使未完成但有推进的事项
 - **新想法**：在"今日思考"中出现的洞察
 - **未完成事项**：未勾选的任务、遇到的问题
-- **可延续内容**：值得放入明日或项目 Next_Actions 的内容
+- **可延续内容**：值得放入明日或项目“下一步”的内容
 
 ### Step 6: 生成一日总结
 

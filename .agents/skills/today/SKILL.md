@@ -53,19 +53,20 @@ description: Generate today's prioritized plan based on daily notes, tasks, and 
 - `下一步`（如果有）
 - `遇到的问题`（如果有）
 
-### Step 4: 扫描项目 Next Actions
+### Step 4: 扫描项目下一步
 
-使用 Glob 工具查找 `03_Projects/*/04_Next.md`，读取所有项目的 Next 文件，提取各项目待推进的事项。
+使用 Glob 工具查找 `03_Projects/*/Project.md`，读取各项目主页中的“当前状态”“下一步”和“Backlog”，提取待推进事项。
 
 优先关注：
-- `当前冲刺` 部分
-- 与 `Current_Priorities` 中的项目相关的
+- `下一步`中的 1～3 个当前动作
+- `当前状态`中的截止日期与阻塞
+- 与 `Current_Priorities` 中项目相关的任务
 
 ### Step 5: 生成优先计划
 
 综合以上信息，将任务分为三个优先级：
 
-- **Must Do**：来自项目当前冲刺、有明确截止、阻塞他人工作、或用户明确要求的任务
+- **Must Do**：来自项目“下一步”、有明确截止、阻塞他人工作、或用户明确要求的任务
 - **Should Do**：重要但不紧急、推进核心项目的事务
 - **Could Do**：低优先级、可以延后的任务
 
