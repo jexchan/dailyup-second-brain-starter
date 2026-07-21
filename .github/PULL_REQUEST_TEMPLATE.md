@@ -14,7 +14,7 @@
 
 - [ ] 跑过 Obsidian 打开整个 Vault，没有断链
 - [ ] 如果改了 Skill，在 Claude Code / Codex / Cursor 里实测过
-- [ ] 更新了相关的 README / CHANGELOG
+- [ ] 更新了相关文档（如需要）
 
 ## 相关 Issue
 <!-- 如果有对应的 Issue，在这里链接，例如：Closes #123 -->

@@ -123,7 +123,7 @@ docs(quick_start): add instruction for Obsidian Sync
 
 ## 行为准则
 
-参见 [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)。简而言之：互相尊重，就事论事。
+参见 [CODE_OF_CONDUCT.md](./.github/CODE_OF_CONDUCT.md)。简而言之：互相尊重，就事论事。
 
 ---
 

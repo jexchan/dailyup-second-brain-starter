@@ -24,6 +24,6 @@ labels: bug
 - OS: <!-- macOS 14 / Windows 11 / Ubuntu 22.04 ... -->
 - Obsidian 版本:
 - Claude Code / Codex / Cursor 版本（如相关）:
-- 模板版本（CHANGELOG 里的最新版号）:
+- 模板版本（Git tag 或 commit，如知道）:
 
 ## 截图/日志（可选）
