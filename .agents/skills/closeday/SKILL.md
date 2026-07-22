@@ -1,6 +1,7 @@
 ---
 name: closeday
 description: End-of-day review and reflection. Use this skill when the user asks to close the day, end the day, do a daily review, reflect on today, summarize today's work, or wrap up the day. This skill reads today's Daily Note, independent tasks, and project next actions to generate a structured review with completed items, insights, and tomorrow's priorities.
+disable-model-invocation: true
 ---
 
 # Close Day: Daily Review

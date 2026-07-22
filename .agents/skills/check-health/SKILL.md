@@ -1,6 +1,7 @@
 ---
 name: check-health
 description: 定期审查 Obsidian 知识库健康状况，包括：矛盾观点检测、失效双向链接检查、孤立卡片识别。当用户说「检查知识库健康」、「检查链接」、「查孤立卡片」、「审查观点矛盾」或类似表达时触发此技能。
+disable-model-invocation: true
 ---
 
 # Check Health — 知识库健康检查
