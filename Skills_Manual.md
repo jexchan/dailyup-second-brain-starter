@@ -43,7 +43,7 @@ updated: 2026-07-22
 
 | 技能 | 适合场景 | 默认行为 | 主要读取位置 | 可能写入位置 |
 |---|---|---|---|---|
-| `init` | 首次使用模板，快速导览并清理示例 | 先只读，明确确认后删除示例 | 新手入口、个人上下文、代表性示例 | 仅删除模板示例 |
+| `init` | 首次使用模板，快速导览并清理示例 | 先只读，明确确认后清理 | 新手入口、个人上下文、代表性示例 | 删除模板示例并更新相关 README |
 | `session-brief` | 开始一次工作会话，快速恢复上下文 | 只读 | `01_Context/`, `02_Daily/`, `06_Tasks/`, `03_Projects/` | 不写入 |
 | `today` | 生成今日计划和优先级 | 只读 | `01_Context/`, `06_Tasks/`, `02_Daily/`, `03_Projects/*/Project.md` | 不写入 |
 | `closeday` | 做每日收尾和复盘 | 先只读，确认后写入 | `02_Daily/`, `03_Projects/`, `06_Tasks/` | 今日 Daily Note |
@@ -189,7 +189,7 @@ updated: 2026-07-22
 - `01_Context/Current_Priorities.md`
 - Daily、项目、知识卡片、主题和剪藏中的代表性示例
 
-安全边界：只清理约定目录中的 `_EXAMPLE_*` 和 `03_Projects/_Example_Project/`；询问清理时不会在同一轮执行删除。初始化不创建 Daily Note。
+安全边界：只清理约定目录中的 `_EXAMPLE_*`、`03_Projects/_Example_Project/` 及相关 README 中的示例引用；询问清理时不会在同一轮执行删除。初始化不创建 Daily Note。
 
 ---
 

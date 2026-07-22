@@ -15,16 +15,16 @@ Read `AGENTS.md`, then run this read-only command from the Vault root:
 bash .agents/skills/init/scripts/cleanup_examples.sh --list
 ```
 
-Treat the numeric `TOTAL` line as the initialization signal.
+The output distinguishes files to delete (`DELETE`) from README files to update (`UPDATE`). Treat the numeric `TOTAL` line as the initialization signal.
 
 - If `TOTAL=0`, say only that initialization is already complete, then suggest filling in `01_Context/About_Me.md` and `01_Context/Current_Priorities.md` or running `/card-creator`. Stop there.
 - If examples exist, continue with the onboarding flow.
 
 ## 2. Welcome the user
 
-Open with this concise idea, adapting the wording naturally without expanding it into a long explanation:
+Open with this concise welcome and do not expand it into a longer introduction:
 
-> 欢迎来到 DailyUp Second Brain。这不只是一个笔记仓库，而是一个让你与 AI 共同维护上下文、项目、知识和行动的长期工作空间。
+> 欢迎来到 DailyUp Second Brain，从这里开启你的第二大脑！今后，这里将成为你与 AI 一起学习、思考和创造的长期工作空间。
 
 ## 3. Give a minimal guided tour
 
@@ -48,7 +48,7 @@ Keep the tour compact: group the core files together and the examples together.
 
 ## 4. Ask before cleanup
 
-Show the complete target list returned by `--list`, state the total, and ask one direct question: whether to delete all listed template examples now.
+Show the complete target list returned by `--list`. Clearly distinguish example files that will be deleted from README files whose example references will be removed. State both totals and ask one direct question: whether to perform the complete cleanup now.
 
 Stop and wait for the user's answer. Do not interpret silence, ambiguity, or an unrelated reply as consent. Do not run any deletion command in the same turn that asks for confirmation.
 
@@ -56,8 +56,9 @@ The cleanup scope must remain limited to:
 
 - `_EXAMPLE_*` entries found by the helper in its designated template directories
 - `03_Projects/_Example_Project/`
+- Example-specific references in the README files reported by the helper
 
-Never delete other paths merely because their names contain `example`.
+Never delete other paths merely because their names contain `example`. Do not remove unrelated README content.
 
 ## 5. Handle the answer
 
@@ -67,7 +68,7 @@ If the user clearly confirms, run:
 bash .agents/skills/init/scripts/cleanup_examples.sh --clean --yes
 ```
 
-Report whether cleanup completed and whether any targets remain. If cleanup fails, preserve the error details and do not improvise broader deletion commands.
+Report how many example files were deleted, which README files were updated, and whether any targets remain. If cleanup fails, preserve the error details and do not improvise broader deletion or editing commands.
 
 If the user declines, do not delete anything. Mention that `/init` can be run again later.
 
