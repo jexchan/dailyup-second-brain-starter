@@ -21,7 +21,7 @@ def root_readme(text: str) -> str:
     return text.replace(
         "主题默认从一个文件开始，不预建复杂子目录。模板保留 "
         "`_EXAMPLE_Learning_Science.md` 展示主题地图的写法；"
-        "初始化个人 Vault 时可通过 `/init` 清理。",
+        "初始化个人 Vault 时可通过 `/onboard` 清理。",
         "主题默认从一个文件开始，不预建复杂子目录。",
     )
 
@@ -68,7 +68,7 @@ def topics_readme(text: str) -> str:
     return re.sub(
         r"\n## 示例\n\n"
         r"- \[\[_EXAMPLE_Learning_Science\]\] — 展示长期主题地图如何连接问题、卡片、项目与来源\n\n"
-        r"初始化个人 Vault 时，运行 `/init` 可在确认后清理 `_EXAMPLE_\*` 示例文件。\n?",
+        r"初始化个人 Vault 时，运行 `/onboard` 可在确认后清理 `_EXAMPLE_\*` 示例文件。\n?",
         "\n",
         text,
     )

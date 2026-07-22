@@ -57,4 +57,4 @@ Topic 通过链接连接这些内容，不在目录中复制保存它们。
 
 - [[_EXAMPLE_Learning_Science]] — 展示长期主题地图如何连接问题、卡片、项目与来源
 
-初始化个人 Vault 时，运行 `/init` 可在确认后清理 `_EXAMPLE_*` 示例文件。
+初始化个人 Vault 时，运行 `/onboard` 可在确认后清理 `_EXAMPLE_*` 示例文件。

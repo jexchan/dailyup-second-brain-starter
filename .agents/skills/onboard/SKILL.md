@@ -1,9 +1,9 @@
 ---
-name: init
-description: Welcome a new user to the DailyUp Second Brain Starter, give a concise guided tour, and safely remove template example files after explicit confirmation. Use only when the user explicitly invokes `/init`.
+name: onboard
+description: Welcome a new user to the DailyUp Second Brain Starter, give a concise guided tour, and safely remove template example files after explicit confirmation. Use only when the user explicitly invokes `/onboard`.
 ---
 
-# Initialize the Vault
+# Onboard a New User
 
 Guide a new user through a short, friendly initialization. Keep the entire experience simple and concise. Do not create a Daily Note or modify personal context files.
 
@@ -12,7 +12,7 @@ Guide a new user through a short, friendly initialization. Keep the entire exper
 Read `AGENTS.md`, then run this read-only command from the Vault root:
 
 ```bash
-bash .agents/skills/init/scripts/cleanup_examples.sh --list
+bash .agents/skills/onboard/scripts/cleanup_examples.sh --list
 ```
 
 The output distinguishes files to delete (`DELETE`) from README files to update (`UPDATE`). Treat the numeric `TOTAL` line as the initialization signal.
@@ -65,12 +65,12 @@ Never delete other paths merely because their names contain `example`. Do not re
 If the user clearly confirms, run:
 
 ```bash
-bash .agents/skills/init/scripts/cleanup_examples.sh --clean --yes
+bash .agents/skills/onboard/scripts/cleanup_examples.sh --clean --yes
 ```
 
 Report how many example files were deleted, which README files were updated, and whether any targets remain. If cleanup fails, preserve the error details and do not improvise broader deletion or editing commands.
 
-If the user declines, do not delete anything. Mention that `/init` can be run again later.
+If the user declines, do not delete anything. Mention that `/onboard` can be run again later.
 
 In either case, close with two next steps:
 

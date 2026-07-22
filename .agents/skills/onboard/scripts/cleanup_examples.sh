@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #
-# cleanup_examples.sh — Deterministic example cleanup helper for the /init skill
+# cleanup_examples.sh — Deterministic example cleanup helper for the /onboard skill
 #
 # Usage (from the Vault root):
-#   bash .agents/skills/init/scripts/cleanup_examples.sh --list
-#   bash .agents/skills/init/scripts/cleanup_examples.sh --clean --yes
+#   bash .agents/skills/onboard/scripts/cleanup_examples.sh --list
+#   bash .agents/skills/onboard/scripts/cleanup_examples.sh --clean --yes
 
 set -euo pipefail
 

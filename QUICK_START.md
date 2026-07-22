@@ -52,12 +52,12 @@ git commit -m "initial commit from starter"
 
 ---
 
-## 第 3 步：运行 `/init`
+## 第 3 步：运行 `/onboard`
 
 打开你的 AI 编码工具（如 Codex / ZCode），进入 `my-brain/` 目录，然后明确运行：
 
 ```text
-/init
+/onboard
 ```
 
 它会用一个很短的流程带你完成初始化：
@@ -68,11 +68,11 @@ git commit -m "initial commit from starter"
 4. 询问是否清理示例
 5. 告诉你接下来可以做什么
 
-只有在你明确确认后，它才会删除 `_EXAMPLE_*` 和 `_Example_Project/`。你也可以先保留示例，之后再次运行 `/init`。
+只有在你明确确认后，它才会删除 `_EXAMPLE_*` 和 `_Example_Project/`。你也可以先保留示例，之后再次运行 `/onboard`。
 
-> **注意**：`/init` 不会创建 Daily Note，也不会替你填写个人资料。
+> **注意**：`/onboard` 不会创建 Daily Note，也不会替你填写个人资料。
 >
-> 如果示例已经清理完毕，再次运行 `/init` 只会提示初始化已完成。
+> 如果示例已经清理完毕，再次运行 `/onboard` 只会提示初始化已完成。
 
 ---
 
