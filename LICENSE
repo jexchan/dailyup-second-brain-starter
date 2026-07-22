@@ -31,7 +31,7 @@ SOFTWARE.
 
 
 Creative Commons Attribution 4.0 International (CC BY 4.0)
-(applies to all documentation, templates, frameworks, example cards, and other content)
+(applies to all documentation, templates, topic maps, example cards, and other content)
 =======================================================================================
 
 You are free to:
@@ -68,7 +68,7 @@ Content (CC BY 4.0):
   - 00_System/ rules and writing conventions
   - Card templates in 04_Knowledge/00_Cards/.templates/
   - Project templates in 03_Projects/.templates/
-  - Framework documents in 04_Knowledge/Frameworks/
+  - Topic maps in 04_Knowledge/01_Topics/
   - Example cards, example projects, example daily notes
   - 07_Bases/ base definitions (treated as content)
 

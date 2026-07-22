@@ -1,125 +1,50 @@
 ---
 title: Knowledge Directory
-description: 长期知识沉淀与方法论
+description: 长期知识卡片与主题地图
 created: 2026-04-23
+updated: 2026-07-22
 tags: [knowledge, system]
 ---
-
 # Knowledge
 
-> 长期知识沉淀与方法论仓库
-
----
+`04_Knowledge/` 保存经过整理、值得长期复用的知识。
 
 ## 目录结构
 
-```
+```text
 04_Knowledge/
-├── 00_Cards/          # 原子化知识卡片
-├── 01_Topics/         # 主题学习笔记
-├── Frameworks/        # 方法论手册
-└── README.md          # 本文件
+├── 00_Cards/      # 原子化知识卡片
+├── 01_Topics/     # 长期主题地图
+└── README.md
 ```
 
-> **注意**：网上剪藏文章已迁移至 `05_References/`，详见 [[../05_References|05_References/README]]
+## 00_Cards
 
----
+一张卡片聚焦一个可以独立引用的概念、观点、模型、清单、人物或资源。
 
-## 各目录说明
+`00_Cards/.templates/` 提供 22 种卡片模板。常见方法论按形态处理：
 
-### 00_Cards/
-原子化知识卡片集合，每张卡片聚焦一个单一知识点。
+- 原理或思考模型 → `mentalmodel` 卡片
+- 人可直接执行的步骤 → `checklist` 卡片
+- 用来指导 AI 执行的完整流程 → `.agents/skills/`
 
-`00_Cards/.templates/` 下提供 22 种卡片模板，直接复制使用。
+## 01_Topics
 
-**卡片类型**：insight、person、book、mentalmodel、term、quote、resource、tool、opensource、prompt、course、checklist、book-note、tip、subscription、atomic-habit、techstack、story、paradox、counterintuitive、question、moc
+Topic 是长期关注领域的知识地图，用于维护主题范围、核心问题、阶段性理解，以及相关卡片、项目和来源之间的连接。
 
----
+默认从单个主题文件开始，不预建复杂目录。详见 [[01_Topics/README|Topics 使用说明]]。
 
-### 01_Topics/
-主题学习笔记，用于存放某个领域的系统学习过程。
+## 内容路由
 
-**边界规则**：
-- 单个概念、观点、模型 → `00_Cards/`
-- 某个领域的系统学习过程 → `01_Topics/`
-- 可重复调用、需要整体阅读、能指导行动的方法论手册 → `Frameworks/`
+| 内容 | 位置 |
+|---|---|
+| 单个概念、观点、模型或清单 | `00_Cards/` |
+| 长期领域的知识地图与综合理解 | `01_Topics/` |
+| 有目标、期限或完成标准的工作 | `03_Projects/` |
+| 外部文章和原始资料 | `05_References/` |
+| AI 可执行的完整流程 | `.agents/skills/` |
 
-**典型场景**：
-- 跟随 Andrej Karpathy 的 LLM 课程学习
-- 系统学习 AI Safety
-- 研究某个技术领域
-
-**推荐结构**：
-```
-Topics/{主题名}/
-├── 00_Overview.md       # 学习目标、进度、资源链接
-├── 01_Notes/            # 视频/阅读笔记
-├── 02_Exercises/        # 练习、代码、项目
-├── 03_Concepts/         # 提取的概念卡片（链接到 00_Cards）
-└── 99_Resources.md      # 外部资源汇总
-```
-
-**示例主题**：
-- [[_EXAMPLE_Learning_Science/_EXAMPLE_Core_Principles]] — 学习科学主题笔记示例
-
----
-
-### Frameworks/
-**方法论手册** — 只存放可重复调用、需要整体阅读、能指导行动的方法论手册。
-
-**边界规则**：
-- 单个概念、观点、模型 → `00_Cards/`
-- 某个领域的系统学习过程 → `01_Topics/`
-- 可作为完整流程反复调用的方法论手册 → `Frameworks/`
-
-**重要**：`Frameworks/` 与 `00_Cards/` 的区别
-
-| Frameworks | 00_Cards |
-|-----------|----------|
-| 方法论手册（整体阅读） | 原子化知识单元（可引用） |
-| 操作性框架（如何做） | 概念性知识（是什么） |
-| 示例：_EXAMPLE_问题-框架-落地 | 示例：mentalmodel_第一性原理 |
-
-**区分原则**：
-- 问自己：这是"一本手册"还是"一个工具"？
-- **手册** → `Frameworks/`
-- **工具** → `mentalmodel_` 卡片
-
-**示例框架**：
-- [[_EXAMPLE_问题-框架-落地]] — 内容结构化方法
-
----
-
-## 使用指南
-
-### 添加新知识
-
-1. **原子化知识点** → 在 `00_Cards/` 创建对应类型的卡片
-2. **网上剪藏文章** → 暂存 `05_References/01_Inbox/`，消化后形成卡片、项目决定或行动；原文本身值得长期保留时进入 `02_Library/`
-3. **主题学习** → 在 `01_Topics/` 创建主题目录
-4. **新方法论手册** → 在 `Frameworks/` 添加文档
-
-> **网上剪藏流程**：`05_References/01_Inbox/` → 阅读与判断 → 卡片/项目/行动 → `02_Library/` 或删除
-
-### 卡片与 Frameworks 的选择
-
-当你不确定内容该放哪里时：
-
-```
-内容需要整体阅读才能理解？
-├── 是 → Frameworks/
-└── 否 → 00_Cards/
-
-内容是"如何做"的操作步骤？
-├── 是 → Frameworks/
-└── 否 → 00_Cards/
-
-内容可以被单独引用和链接？
-├── 是 → 00_Cards/
-└── 否 → Frameworks/
-```
-
----
+网上剪藏先进入 `05_References/01_Inbox/`；消化后形成卡片、Topic 更新、项目决定或行动。原文本身值得长期保留时才进入 `05_References/02_Library/`。
 
 ## 相关文档
 

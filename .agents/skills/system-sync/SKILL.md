@@ -21,7 +21,7 @@ description: 将当前 Obsidian Vault 中新增、删除、迁移、重命名或
 - `01_Context/` — 稳定全局上下文
 - `02_Daily/` — 每日记录和模板
 - `03_Projects/` — 项目资料和项目模板
-- `04_Knowledge/` — 知识卡片、主题笔记、框架方法论
+- `04_Knowledge/` — 原子知识卡片和长期主题地图
 - `05_References/` — 外部剪藏与参考资料
 - `06_Tasks/` — Inbox 和任务管理
 - `07_Bases/` — Obsidian Base 数据库视图
@@ -44,7 +44,6 @@ description: 将当前 Obsidian Vault 中新增、删除、迁移、重命名或
 - `04_Knowledge/README.md`
 - `04_Knowledge/00_Cards/README.md`
 - `04_Knowledge/01_Topics/README.md`
-- `04_Knowledge/Frameworks/README.md`
 - `05_References/README.md`
 
 注意：不要假设存在 `20_Archive/`。只有实际扫描到该目录或用户明确新增时，才把它写入系统说明。
@@ -298,7 +297,6 @@ find . -path './.git' -prune -o -path './.obsidian' -prune -o -type f \( -path '
 - `04_Knowledge/README.md`
 - `04_Knowledge/00_Cards/README.md`
 - `04_Knowledge/01_Topics/README.md`
-- `04_Knowledge/Frameworks/README.md`
 - `05_References/README.md`
 
 #### `Skills_Manual.md`

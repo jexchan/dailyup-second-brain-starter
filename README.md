@@ -87,8 +87,7 @@ cd my-brain
 ├── 03_Projects/       # 轻量项目管理（单页模板 + 按需产出目录）
 ├── 04_Knowledge/      # 长期知识沉淀
 │   ├── 00_Cards/      # 22 种原子化卡片 + 6 张示例
-│   ├── 01_Topics/     # 主题学习笔记（含 1 个示例主题）
-│   └── Frameworks/    # 可重复调用的方法论手册
+│   └── 01_Topics/     # 长期主题地图（含 1 个示例主题）
 ├── 05_References/     # 剪藏消化（Inbox → 卡片/项目/行动 → 精选 Library）
 ├── 06_Tasks/          # Inbox 捕获 + 非项目任务管理
 ├── 07_Bases/          # Obsidian 数据库视图
@@ -124,27 +123,16 @@ cd my-brain
 
 ---
 
-## Frameworks 方法论手册
+## Topics 长期主题地图
 
-`04_Knowledge/Frameworks/` 只存放**可重复调用、需要整体阅读、能指导行动的方法论手册**。
-
-- 单个概念、观点、模型 → 放入 `04_Knowledge/00_Cards/`
-- 某个领域的系统学习过程 → 放入 `04_Knowledge/01_Topics/`
-- 可作为完整流程反复调用的方法论手册 → 放入 `04_Knowledge/Frameworks/`
-
-模板中仅保留 `_EXAMPLE_问题-框架-落地.md` 作为示例方法论手册；初始化个人 Vault 时可由 `scripts/init.sh` 清理。
-
----
-
-## Topics 主题学习笔记
-
-`04_Knowledge/01_Topics/` 用于存放**某个领域的系统学习过程**。
+`04_Knowledge/01_Topics/` 用于维护**长期关注领域的知识地图与阶段性理解**。
 
 - 单个概念、观点、模型 → 放入 `04_Knowledge/00_Cards/`
-- 可重复调用、需要整体阅读、能指导行动的方法论手册 → 放入 `04_Knowledge/Frameworks/`
-- 围绕某个领域持续积累目标、笔记、练习和资源 → 放入 `04_Knowledge/01_Topics/`
+- 长期领域的综合理解与知识连接 → 放入 `04_Knowledge/01_Topics/`
+- 有目标和完成标准的学习 → 放入 `03_Projects/`
+- AI 可执行的方法 → 转化为 `.agents/skills/`
 
-模板中保留 `_EXAMPLE_Learning_Science/` 作为示例主题目录；初始化个人 Vault 时可由 `scripts/init.sh` 清理。
+主题默认从一个文件开始，不预建复杂子目录。模板保留 `_EXAMPLE_Learning_Science.md` 展示主题地图的写法；初始化个人 Vault 时可由 `scripts/init.sh` 清理。
 
 ---
 
@@ -212,7 +200,7 @@ cd my-brain
 本项目采用**双许可**：
 
 - **代码部分**（Skills、脚本、配置） — [MIT License](./LICENSE)
-- **内容部分**（文档、模板、示例卡片、Frameworks） — [CC BY 4.0](./LICENSE)
+- **内容部分**（文档、模板、示例卡片和主题地图） — [CC BY 4.0](./LICENSE)
 
 简单说：**自由使用、修改、商用，保留出处就行**。
 

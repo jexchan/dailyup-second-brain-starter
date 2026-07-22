@@ -1,64 +1,60 @@
 ---
 title: Topics Directory
-description: 主题学习笔记目录
+description: 长期主题地图目录
 created: 2026-05-26
+updated: 2026-07-22
 tags: [knowledge, topics, system]
 ---
 # Topics
 
-`01_Topics/` 用于存放**某个领域的系统学习过程**。
+`01_Topics/` 用于维护**长期关注领域的知识地图与阶段性理解**。
 
-它适合承载一段持续学习：目标、路线、阅读笔记、练习记录、资源清单，以及从学习过程中提炼出来的概念卡片链接。
+Topic 不是资料仓库，也不是有截止时间的学习项目。它负责回答：这个领域包含什么、我目前如何理解、已有知识如何连接、接下来还想探索什么。
 
----
+## 内容边界
 
-## 边界规则
+- 单个概念、观点或模型 → `04_Knowledge/00_Cards/`
+- 长期领域的知识地图与综合理解 → `04_Knowledge/01_Topics/`
+- 有目标、期限或完成标准的学习 → `03_Projects/`
+- 外部文章与原始资料 → `05_References/`
+- 人可直接执行的方法 → `mentalmodel` 或 `checklist` 卡片
+- 用来指导 AI 执行的完整流程 → `.agents/skills/`
 
-- 单个概念、观点、模型 → 放入 `04_Knowledge/00_Cards/`
-- 某个领域的系统学习过程 → 放入 `04_Knowledge/01_Topics/`
-- 可重复调用、需要整体阅读、能指导行动的方法论手册 → 放入 `04_Knowledge/Frameworks/`
+Topic 通过链接连接这些内容，不在目录中复制保存它们。
 
-简单判断：
+## 从一个文件开始
 
-```text
-这是一个知识点吗？
-├── 是 → 00_Cards/
-└── 否 → 继续判断
-
-这是一个可复用的方法论手册吗？
-├── 是 → Frameworks/
-└── 否 → 继续判断
-
-这是围绕某个领域持续学习、积累材料和练习的过程吗？
-├── 是 → 01_Topics/
-└── 否 → 先放入合适的 Inbox 或询问 AI
-```
-
----
-
-## 推荐结构
-
-新建主题时，建议使用以下结构：
+新主题默认只创建一个文件：
 
 ```text
-01_Topics/{Topic_Name}/
-├── 00_Overview.md       # 学习目标、范围、进度、资源入口
-├── 01_Notes/            # 阅读、视频、课程笔记
-├── 02_Exercises/        # 练习、代码、实践记录
-├── 03_Concepts/         # 概念索引，链接到 00_Cards
-└── 99_Resources.md      # 外部资源汇总
+01_Topics/
+└── Learning_Science.md
 ```
 
-小主题可以先从一个 `00_Overview.md` 开始，不必一开始就建完整目录。
+建议包含：
 
----
+```markdown
+# 主题名称
 
-## 示例主题
+## 主题范围
 
-当前模板保留一个示例主题：
+## 核心问题
 
-- `_EXAMPLE_Learning_Science/` — 学习科学主题示例
-  - `_EXAMPLE_Core_Principles.md` — 核心原则示例笔记
+## 当前理解
 
-示例用于展示主题学习笔记的写法。初始化个人 Vault 时，`scripts/init.sh` 会清理 `_EXAMPLE_*` 主题目录。
+## 相关知识
 
+## 相关项目
+
+## 重要来源
+
+## 下一步探索
+```
+
+只有单个文件已经难以维护时，才升级为同名目录，并以 `Topic.md` 作为入口。不预建 Notes、Exercises、Concepts 或 Resources 等子目录。
+
+## 示例
+
+- [[_EXAMPLE_Learning_Science]] — 展示长期主题地图如何连接问题、卡片、项目与来源
+
+初始化个人 Vault 时，`scripts/init.sh` 会清理 `_EXAMPLE_*` 示例文件。

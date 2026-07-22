@@ -1,7 +1,7 @@
 ---
 description: 本地 AI 技能说明手册
 tags: [system, skills, manual]
-updated: 2026-07-21
+updated: 2026-07-22
 ---
 # Skills Manual
 
@@ -50,7 +50,7 @@ updated: 2026-07-21
 | `card-creator` | 创建原子化知识卡片 | 写入 | 用户输入、卡片模板、已有卡片 | `04_Knowledge/00_Cards/` |
 | `spaced-review` | 管理知识卡片间隔复习 | 按请求读写 | 已启用 SRS 的知识卡片 | 卡片 frontmatter |
 | `brain-storming` | 围绕主题发散思考 | 先只读/输出，确认后沉淀 | `01_Context/`, 相关知识文件 | `04_Knowledge/` |
-| `random-thinking` | 随机抽取知识内容，获得灵感 | 只读 | `04_Knowledge/00_Cards/`, `04_Knowledge/01_Topics/`, `04_Knowledge/Frameworks/` | 不写入 |
+| `random-thinking` | 随机抽取知识内容，获得灵感 | 只读 | `04_Knowledge/00_Cards/`, `04_Knowledge/01_Topics/` | 不写入 |
 | `connect` | 寻找两个主题之间的连接 | 只读 | `04_Knowledge/`, `03_Projects/`, `02_Daily/` | 不写入 |
 | `trace` | 追踪一个主题在 Vault 中的演变 | 只读 | `02_Daily/`, `03_Projects/`, `04_Knowledge/`, `01_Context/` | 不写入 |
 | `critical-check` | 对观点、证据、推理做建设性质疑与校验 | 默认只读，确认后写入 | `04_Knowledge/`, `03_Projects/`, `05_References/`, `02_Daily/` | 卡片反思区 / 项目文件 |
@@ -454,7 +454,6 @@ updated: 2026-07-21
 
 - `04_Knowledge/00_Cards/`
 - `04_Knowledge/01_Topics/`
-- `04_Knowledge/Frameworks/`
 
 输出包括：
 

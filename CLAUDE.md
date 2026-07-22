@@ -1,7 +1,7 @@
 ---
 description: System configuration for AI assistants working with this vault
 version: 1.0.0
-last_updated: 2026-07-21
+last_updated: 2026-07-22
 ---
 # CLAUDE.md
 
@@ -78,13 +78,13 @@ last_updated: 2026-07-21
 这里存放长期知识沉淀。
 当任务涉及概念梳理、方法论整合、背景分析、框架比较时，优先读取这里。
 - `00_Cards/.templates/` — 卡片模板
-- `01_Topics/` — 某个领域的系统学习过程
-- `Frameworks/` — 可重复调用、需要整体阅读、能指导行动的方法论手册
+- `01_Topics/` — 长期关注领域的知识地图与阶段性理解
 
-`01_Topics/` 与 `Frameworks/` 的边界：
 - 单个概念、观点、模型 → `00_Cards/`
-- 某个领域的系统学习过程 → `01_Topics/`
-- 可作为完整流程反复调用的方法论手册 → `Frameworks/`
+- 长期领域的综合理解与知识连接 → `01_Topics/`
+- 有目标、期限或完成标准的学习 → `03_Projects/`
+- 人可执行的方法 → `mentalmodel` 或 `checklist` 卡片
+- AI 可执行的完整流程 → `.agents/skills/`
 
 ### `05_References/`
 这里存放外部剪藏：
