@@ -52,7 +52,31 @@ git commit -m "initial commit from starter"
 
 ---
 
-## 第 3 步：填写你的个人上下文
+## 第 3 步：运行 `/init`
+
+打开你的 AI 编码工具（如 Codex / ZCode），进入 `my-brain/` 目录，然后明确运行：
+
+```text
+/init
+```
+
+它会用一个很短的流程带你完成初始化：
+
+1. 欢迎你并介绍这个第二大脑模板
+2. 带你快速浏览核心文件和代表性示例
+3. 列出所有模板示例
+4. 询问是否清理示例
+5. 告诉你接下来可以做什么
+
+只有在你明确确认后，它才会删除 `_EXAMPLE_*` 和 `_Example_Project/`。你也可以先保留示例，之后再次运行 `/init`。
+
+> **注意**：`/init` 不会创建 Daily Note，也不会替你填写个人资料。
+>
+> 如果示例已经清理完毕，再次运行 `/init` 只会提示初始化已完成。
+
+---
+
+## 第 4 步：填写你的个人上下文
 
 这是**最重要的一步**。花约 10 分钟填写，AI 才能结合你的真实情况协作。
 
@@ -67,9 +91,31 @@ git commit -m "initial commit from starter"
 
 ---
 
-## 第 4 步：试跑第一个 AI 技能
+## 第 5 步：创建你的第一张卡片
 
-打开你的 AI 编码工具（如 Codex / ZCode），在 `my-brain/` 目录下运行：
+填写上下文后，可以马上试试 `/card-creator`：
+
+```text
+/card-creator
+```
+
+然后告诉 AI：
+
+```text
+帮我建一张 insight 卡片：「早上写作比晚上更高效」
+```
+
+它会自动：
+
+1. 识别卡片类型（insight）
+2. 读取 `04_Knowledge/00_Cards/.templates/Insight_Card.md`
+3. 填充内容并保存到 `04_Knowledge/00_Cards/`
+
+---
+
+## 第 6 步：试跑日常技能
+
+完成初始化后，可以继续尝试下面两个技能：
 
 ### 试试 `/session-brief`
 
@@ -90,54 +136,6 @@ AI 会读取 `AGENTS.md` / `CLAUDE.md` → `01_Context/` → 最近的 Daily Not
 ```
 
 AI 会基于你填好的 `Current_Priorities.md` + `06_Tasks/Tasks.md` + `06_Tasks/Inbox.md` + `03_Projects/*/Project.md`，生成一份今日聚焦计划。
-
----
-
-## 第 5 步：创建你的第一张卡片
-
-直接跟 AI 说：
-
-```
-帮我建一张 insight 卡片：「早上写作比晚上更高效」
-```
-
-`card-creator` 技能会自动：
-1. 识别你要的卡片类型（insight）
-2. 从 `04_Knowledge/00_Cards/.templates/Insight_Card.md` 取模板
-3. 填充内容，保存到 `04_Knowledge/00_Cards/insight_早上写作比晚上更高效.md`
-
----
-
-## 第 6 步：删除示例内容
-
-最简单的方式——跑内置的初始化脚本：
-
-```bash
-bash scripts/init.sh
-```
-
-它会交互式地：
-- 逐个确认是否删除 `_EXAMPLE_*` 示例文件
-- 删除 `_Example_Project/`
-- 为今天创建第一篇 Daily Note
-- 提醒你填写 `01_Context/` 下的两个上下文文件
-
-如果你想跳过所有确认一键清理：
-
-```bash
-bash scripts/init.sh --yes
-```
-
-或者手动删除：
-
-```bash
-rm 02_Daily/_EXAMPLE_*.md
-rm -rf 03_Projects/_Example_Project
-rm 04_Knowledge/00_Cards/_EXAMPLE_*.md
-rm 05_References/01_Inbox/_EXAMPLE_*.md
-```
-
-也可以把示例留着作为参考，不影响使用。
 
 ---
 
@@ -177,15 +175,6 @@ rm 05_References/01_Inbox/_EXAMPLE_*.md
 ### 可以把这个做成私有仓库吗？
 
 完全可以。License 允许私用、修改、商用。
-
----
-
-## 下一步
-
-- 读一下 `00_System/` 下的所有规则文件，了解写作和命名规范
-- 浏览 `04_Knowledge/00_Cards/.templates/`，看看 22 种卡片模板分别长啥样
-- 看 `07_Bases/`，用 Obsidian Bases 插件查看数据库视图
-- 浏览 `.claude/skills/` 下的 Skill 定义，按需新增你自己的
 
 ---
 

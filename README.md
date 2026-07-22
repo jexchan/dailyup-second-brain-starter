@@ -132,7 +132,7 @@ cd my-brain
 - 有目标和完成标准的学习 → 放入 `03_Projects/`
 - AI 可执行的方法 → 转化为 `.agents/skills/`
 
-主题默认从一个文件开始，不预建复杂子目录。模板保留 `_EXAMPLE_Learning_Science.md` 展示主题地图的写法；初始化个人 Vault 时可由 `scripts/init.sh` 清理。
+主题默认从一个文件开始，不预建复杂子目录。模板保留 `_EXAMPLE_Learning_Science.md` 展示主题地图的写法；初始化个人 Vault 时可通过 `/init` 清理。
 
 ---
 

@@ -1,0 +1,7 @@
+interface:
+  display_name: "初始化知识库"
+  short_description: "Guide new users and safely clean template examples"
+  default_prompt: "Use $init to initialize this second-brain vault."
+
+policy:
+  allow_implicit_invocation: false
