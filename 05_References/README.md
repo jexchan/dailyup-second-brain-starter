@@ -67,6 +67,7 @@ tags:
 
 可以使用：
 
+- `digest` — 引导完成单篇 Inbox 剪藏的判断、消化、沉淀与原文处置
 - `reading-coach` — 理解、质疑、内化并行动
 - `card-creator` — 将稳定洞察创建为知识卡片
 - `critical-check` — 检查文章中的主张、证据与边界

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Digest"
+  short_description: "引导完成单篇剪藏的判断、消化、知识沉淀与原文处置流程"
+  default_prompt: "Use $digest to process one clipped article from Inbox into useful knowledge or action."

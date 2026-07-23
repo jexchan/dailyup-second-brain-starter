@@ -12,7 +12,7 @@
 
 - **8 个主目录的信息架构** — 系统规则 / 上下文 / 日记 / 项目 / 知识 / 参考 / 任务 / Bases
 - **22 种原子化卡片模板** — insight / book / mentalmodel / person / tool / quote …
-- **14 个开箱即用的 AI 技能（Skills）** — `/today`、`/weekly-review`、`/closeday`、`/reading-coach`、`/card-creator` 等
+- **16 个开箱即用的 AI 技能（Skills）** — `/today`、`/digest`、`/weekly-review`、`/reading-coach`、`/card-creator` 等
 - **完整的 AI 协作规则** — CLAUDE.md + AGENTS.md 让任意支持该协议的 AI 编码工具立刻理解你的知识库
 - **Obsidian Bases 数据库视图** — Books、Persons、Resources、Opensource、Subscriptions
 - **清晰的写作规范、命名规范和任务管理规则**
@@ -106,10 +106,12 @@ cd my-brain
 
 | 技能 | 用途 | 触发方式 |
 |---|---|---|
+| `onboard` | 欢迎新用户、导览模板并清理示例 | `/onboard` |
 | `session-brief` | 读懂当前 Vault 状态 | 开新会话时 |
 | `today` | 根据任务和优先级生成今日计划 | "今日计划怎么安排" |
 | `closeday` | 日终复盘 | "帮我结束今天" |
 | `weekly-review` | 周度回顾与下周规划 | "做个周报" |
+| `digest` | 把一篇 Inbox 剪藏转化为知识或行动 | `/digest` |
 | `reading-coach` | 用 ACTOR 框架主动阅读与学习 | "帮我真正学懂这篇内容" |
 | `card-creator` | 根据输入自动创建对应类型的卡片 | "帮我建一张卡" |
 | `brain-storming` | 围绕一个主题多维度发散 | "头脑风暴 X" |
