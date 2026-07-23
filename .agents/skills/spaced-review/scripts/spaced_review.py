@@ -117,6 +117,21 @@ def iter_cards(vault: Path) -> Iterable[Card]:
         yield read_card(path)
 
 
+def resolve_card_path(vault: Path, path_argument: str) -> Path:
+    card_root = (vault / CARD_DIR).resolve()
+    path = (vault / path_argument).resolve()
+    try:
+        path.relative_to(card_root)
+    except ValueError:
+        raise SystemExit(f"Card path must be inside: {card_root}")
+
+    if path.parent != card_root or path.suffix.lower() != ".md":
+        raise SystemExit(f"Card path must be a Markdown file directly under: {card_root}")
+    if not path.exists():
+        raise SystemExit(f"Card not found: {path}")
+    return path
+
+
 def due_cards(vault: Path, today: date) -> List[Card]:
     cards = []
     for card in iter_cards(vault):
@@ -166,9 +181,7 @@ def format_due(cards: List[Card], today: date, limit: int) -> str:
 
 
 def enroll(vault: Path, relative_path: str, priority: str, today: date) -> None:
-    path = (vault / relative_path).resolve()
-    if not path.exists():
-        raise SystemExit(f"Card not found: {path}")
+    path = resolve_card_path(vault, relative_path)
 
     updates = {
         "srs_enabled": "true",
@@ -231,11 +244,10 @@ def review(vault: Path, relative_path: str, rating: str, today: date, note: str)
     if rating not in RATING_VALUES:
         raise SystemExit(f"Rating must be one of: {', '.join(sorted(RATING_VALUES))}")
 
-    path = (vault / relative_path).resolve()
-    if not path.exists():
-        raise SystemExit(f"Card not found: {path}")
-
+    path = resolve_card_path(vault, relative_path)
     card = read_card(path)
+    if not as_bool(card.frontmatter.get("srs_enabled")):
+        raise SystemExit("Card is not enrolled. Run enroll before recording a review.")
     interval, ease, reps, lapses, status = next_schedule(card.frontmatter, rating)
     due = today + timedelta(days=interval)
     updates = {
